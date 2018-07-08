@@ -2,6 +2,7 @@
 @section('css')
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
 @endsection
 @section('content')
 <div class="container">
@@ -33,6 +34,7 @@
                                     <th>Description</th>
                                     <th>Image</th>
                                     <th>URL</th>
+                                    <th>Action</th>
                                 </tr>
                                 @foreach($applications as $application)
                                     <tr>
@@ -42,6 +44,14 @@
                                             <img src="{{ asset('/images/apps/'.$application->img) }}" alt="{{$application->name}}" title="{{$application->name}}"  style="width: 50%;"/>
                                         </td>
                                         <td> {{ $application->url }}</td>
+                                        <td>
+                                            <a href="{{ route('applications.edit', [ 'id' => $application->id ]) }}">
+                                                <button class="button button-blue">Edit</button>
+                                            </a>
+                                            <a href="#">
+                                               <button class="button button-red">Delete</button>
+                                            </a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </table>

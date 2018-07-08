@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Application;
 use App\Http\Requests\ApplicationRequest;
 use App\Repositories\ApplicationsRepository;
 use Illuminate\Http\Request;
@@ -71,9 +72,10 @@ class ApplicationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Application $application)
     {
-        //
+        return view('add_application')
+            ->with(['application' => $application]);
     }
 
     /**
@@ -85,7 +87,7 @@ class ApplicationsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd('ok');
     }
 
     /**
