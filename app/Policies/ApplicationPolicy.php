@@ -23,4 +23,16 @@ class ApplicationPolicy
         return $user->canDo('VIEW_APPLICATIONS');
     }
 
+    public function add(User $user){
+        return $user->canDo('ADD_APPLICATIONS');
+    }
+
+    public function update(User $user){
+        return $user->canDo('UPDATE_APPLICATIONS');
+    }
+
+    public function delete(User $user){
+        return $user->canDo('DELETE_APPLICATIONS');
+    }
+
 }

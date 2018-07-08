@@ -51,6 +51,10 @@ class ApplicationsController extends Controller
      */
     public function store(ApplicationRequest $request)
     {
+        if(Gate::denies('add', new \App\Application)){
+            abort(403);
+        }
+
         $result = $this->a_rep->addApplication($request);
         if(is_array($result) && !empty($result['error'])){
             return back()->with($result);
@@ -92,6 +96,9 @@ class ApplicationsController extends Controller
      */
     public function update(ApplicationRequest $request, Application $application)
     {
+        if(Gate::denies('update', new \App\Application)){
+            abort(403);
+        }
         $result = $this->a_rep->updateApplication($request, $application);
         if(is_array($result) && !empty($result['error'])){
             return back()->with($result);
@@ -109,6 +116,10 @@ class ApplicationsController extends Controller
      */
     public function destroy(Application $application)
     {
+        if(Gate::denies('delete', new \App\Application)){
+            abort(403);
+        }
+
         $result = $this->a_rep->deleteApplication($application);
 
         if(is_array($result) && !empty($result['error'])){
