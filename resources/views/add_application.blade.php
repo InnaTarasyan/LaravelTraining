@@ -29,8 +29,13 @@
                         @endif
                         {!! Form::file('img', ['class' => 'filestyle','data-buttonText'=>'Upload Image','data-buttonName'=>"btn-primary",'data-placeholder'=>"Upload Image"]) !!}
 
+
                         @if(isset($application->id))
                             <input type="hidden" name="_method" value="PUT">
+                        @endif
+
+                        @if(isset($application->img))
+                            {!! Form::hidden('old_image',$application->img) !!}
                         @endif
 
                         {!! Form::button('Submit', ['class' => 'btn btn-success','type'=>'submit']) !!}

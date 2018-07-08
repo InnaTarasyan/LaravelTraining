@@ -23,12 +23,16 @@ class ApplicationRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        $rules = [
             'name' => 'required|max:100',
             'desc' => 'required',
-            'img' => 'required',
             'url' => 'required'
         ];
+
+        if($this->get('old_image') == null){
+            $rules['img'] = 'required';
+        }
+        return $rules;
 
     }
 }

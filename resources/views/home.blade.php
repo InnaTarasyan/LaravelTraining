@@ -48,16 +48,17 @@
                                             <a href="{{ route('applications.edit', [ 'id' => $application->id ]) }}">
                                                 <button class="button button-blue">Edit</button>
                                             </a>
-                                            <a href="#">
-                                               <button class="button button-red">Delete</button>
-                                            </a>
+                                            {!! Form::open(['url' => route('applications.destroy', ['id'=>$application->id]),'class'=>'form-horizontal','method'=>'POST']) !!}
+                                                {{ method_field('DELETE') }}
+                                                {!! Form::button('Delete', ['class' => 'button button-red','type'=>'submit']) !!}
+                                            {!! Form::close() !!}
                                         </td>
                                     </tr>
                                 @endforeach
                             </table>
                         </div>
 
-
+                        <br/>
                         <div class="center">
                             <div class="pagination">
 

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Application;
 use App\Http\Requests\ApplicationRequest;
 use App\Repositories\ApplicationsRepository;
-use Illuminate\Http\Request;
 
 class ApplicationsController extends Controller
 {
@@ -51,7 +50,7 @@ class ApplicationsController extends Controller
             return back()->with($result);
         }
 
-        return redirect('home')->with($result);
+        return redirect('applications')->with($result);
 
     }
 
@@ -85,9 +84,15 @@ class ApplicationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ApplicationRequest $request, Application $application)
     {
-        dd('ok');
+        $result = $this->a_rep->updateApplication($request, $application);
+        if(is_array($result) && !empty($result['error'])){
+            return back()->with($result);
+        }
+
+        return redirect('applications')->with($result);
+
     }
 
     /**
@@ -96,9 +101,15 @@ class ApplicationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Application $application)
     {
-        //
+        $result = $this->a_rep->deleteApplication($application);
+
+        if(is_array($result) && !empty($result['error'])){
+            return back()->with($result);
+        }
+
+        return redirect('/applications')->with($result);
     }
 
     public function add(){
