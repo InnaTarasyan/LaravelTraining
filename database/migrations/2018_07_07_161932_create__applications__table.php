@@ -18,6 +18,7 @@ class CreateApplicationsTable extends Migration
             $table->string('name', 255);
             $table->text('desc');
             $table->string('img');
+            $table->string('url');
             $table->integer('user_id')->unsigned()->default(1);
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

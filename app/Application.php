@@ -10,6 +10,7 @@ class Application extends Model
         'name',
         'desc',
         'img',
+        'url',
         'user_id'];
 
     public function user(){
