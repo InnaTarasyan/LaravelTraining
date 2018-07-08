@@ -6,6 +6,8 @@ use App\Application;
 use App\Http\Requests\ApplicationRequest;
 use App\Repositories\ApplicationsRepository;
 
+use Gate;
+
 class ApplicationsController extends Controller
 {
     protected $a_rep;
@@ -22,6 +24,10 @@ class ApplicationsController extends Controller
      */
     public function index()
     {
+        if(Gate::denies('view', new \App\Application)){
+            abort(403);
+        }
+
         $applications = $this->getApplications();
         return view('home')
             -> with(['applications' => $applications]);

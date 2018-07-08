@@ -34,4 +34,32 @@ class User extends Authenticatable
     public function applications(){
         return $this->hasMany('App\Application');
     }
+
+    public function canDo($permission, $require = FALSE) {
+        if(is_array($permission)) {
+            foreach($permission as $permName) {
+
+                $permName = $this->canDo($permName);
+                if($permName && !$require) {
+                    return TRUE;
+                }
+                else if(!$permName  && $require) {
+                    return FALSE;
+                }
+            }
+
+            return  $require;
+        }
+        else {
+            foreach($this->roles as $role) {
+                foreach($role->permissions as $perm) {
+                    //foo*    foobar
+                    if(str_is($permission,$perm->name)) {
+                        return TRUE;
+                    }
+                }
+            }
+        }
+    }
+
 }
