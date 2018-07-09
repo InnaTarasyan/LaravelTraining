@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
+use Blade;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -15,7 +17,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        //
+
+        Blade::directive('set', function ($exp){
+            list($name, $val) = explode(',', $exp);
+            return "<?php $name = $val ?>";
+        });
+
     }
 
     /**

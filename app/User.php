@@ -35,6 +35,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Application');
     }
 
+    public function comments(){
+        return $this->hasMany('App\Comment');
+    }
+
     public function canDo($permission, $require = FALSE) {
         if(is_array($permission)) {
             foreach($permission as $permName) {

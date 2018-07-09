@@ -24,4 +24,14 @@ abstract class Repository
         return $builder->get();
 
     }
+
+    public function one($id, $attr = array()){
+        $data = $this->model->where('id', $id)->get();
+        if(count($data) > 0){
+            $result = $data->first();
+            return $result;
+        }
+        return [];
+    }
+
 }

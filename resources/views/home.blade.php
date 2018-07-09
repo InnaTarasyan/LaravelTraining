@@ -38,7 +38,11 @@
                                 </tr>
                                 @foreach($applications as $application)
                                     <tr>
-                                        <td>{{ $application->name }}</td>
+                                        <td>
+                                            <a href="{{ route('applications.show', ['id' => $application->id]) }}">
+                                                {{ $application->name }}
+                                            </a>
+                                        </td>
                                         <td> {{ $application->desc }}</td>
                                         <td>
                                             <img src="{{ asset('/images/apps/'.$application->img) }}" alt="{{$application->name}}" title="{{$application->name}}"  style="width: 50%;"/>

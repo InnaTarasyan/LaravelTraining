@@ -6,15 +6,19 @@ use App\Application;
 use App\Http\Requests\ApplicationRequest;
 use App\Repositories\ApplicationsRepository;
 
+use App\Repositories\CommentsRepository;
 use Gate;
 
 class ApplicationsController extends Controller
 {
     protected $a_rep;
-    public function __construct(ApplicationsRepository $a_rep)
+    protected $c_rep;
+
+    public function __construct(ApplicationsRepository $a_rep, CommentsRepository $c_rep)
     {
         $this->middleware('auth');
         $this->a_rep = $a_rep;
+        $this->c_rep = $c_rep;
     }
 
     /**
@@ -70,9 +74,12 @@ class ApplicationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Application $application)
     {
-        //
+        $application = $this->a_rep->one($application->id, ['comments' => TRUE]);
+
+        return view('application')
+            ->with(['application' => $application]);
     }
 
     /**
@@ -135,5 +142,13 @@ class ApplicationsController extends Controller
 
     public function getApplications(){
         return $this->a_rep->get('*', FALSE, TRUE, FALSE);
+    }
+
+    public function getComments(){
+        $comments = $this->c_rep->get(['text', 'article_id', 'user_id' ], FALSE);
+        if($comments){
+            $comments->load('user', 'application');
+        }
+        return $comments;
     }
 }

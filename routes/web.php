@@ -11,11 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ApplicationsController@index');
 
 Auth::routes();
 
 Route::get('/add', 'ApplicationsController@add')->name('add');
 Route::resource('applications', 'ApplicationsController');
+Route::resource('comments', 'CommentsController');

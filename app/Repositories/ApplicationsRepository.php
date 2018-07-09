@@ -65,9 +65,22 @@ class ApplicationsRepository extends Repository{
 
 
     public function deleteApplication($application){
+        $application->comments()->delete();
         if($application->delete()){
             return ['status' => 'Приложение удалено!'];
         }
 
     }
+
+    public function one($id, $attr = array()){
+        $application = parent::one($id, $attr);
+
+        if($application && !empty($attr)){
+            $application->load('comments');
+            $application->comments->load('user');
+        }
+
+        return $application;
+    }
+
 }
