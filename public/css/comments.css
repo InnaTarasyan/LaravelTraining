@@ -108,8 +108,8 @@ h3#comments-title span {
 }
 
 
-a, a.text-color:hover { color: #b77a2b; }
-a:hover { color: #030303; text-decoration: none; }
+/*a, a.text-color:hover { color: #b77a2b; }*/
+/*a:hover { color: #030303; text-decoration: none; }*/
 
 .bypostauthor .comment-container, .bypostauthor .comment-container .children, .bypostauthor .children .bypostauthor .comment-container, .bypostauthor .children .bypostauthor .children .comment-container, .bypostauthor .children .bypostauthor .children .bypostauthor .comment-container, .bypostauthor .children .bypostauthor .children .bypostauthor .children .bypostauthor .comment-container, .bypostauthor .children .bypostauthor .children .bypostauthor .children .bypostauthor .children .bypostauthor .comment-container {
     background-color: #f4f4f4;

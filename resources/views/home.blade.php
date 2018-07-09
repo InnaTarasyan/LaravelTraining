@@ -43,11 +43,14 @@
                                                 {{ $application->name }}
                                             </a>
                                         </td>
-                                        <td> {{ $application->desc }}</td>
+                                        <td>
+                                            {!! mb_strimwidth($application->desc, 0, 50, "...")  !!}
                                         <td>
                                             <img src="{{ asset('/images/apps/'.$application->img) }}" alt="{{$application->name}}" title="{{$application->name}}"  style="width: 50%;"/>
                                         </td>
-                                        <td> {{ $application->url }}</td>
+                                        <td>
+                                            <a href="{{ $application->url }}">{{ $application->url }}</a>
+                                        </td>
                                         <td>
                                             <a href="{{ route('applications.edit', [ 'id' => $application->id ]) }}">
                                                 <button class="button button-blue">Edit</button>
@@ -61,7 +64,10 @@
                                 @endforeach
                             </table>
                         </div>
-
+                        <br/>
+                        <a href=" {{ route('add') }}">
+                            <button class="button button-green">Add New Application</button>
+                        </a>
                         <br/>
                         <div class="center">
                             <div class="pagination">

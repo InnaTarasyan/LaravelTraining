@@ -8,17 +8,20 @@ use App\Repositories\ApplicationsRepository;
 
 use App\Repositories\CommentsRepository;
 use Gate;
+use Illuminate\Support\Facades\Auth;
 
-class ApplicationsController extends Controller
+class ApplicationsController extends BaseController
 {
     protected $a_rep;
     protected $c_rep;
 
+
     public function __construct(ApplicationsRepository $a_rep, CommentsRepository $c_rep)
     {
-        $this->middleware('auth');
+        parent::__construct(new \App\Repositories\MenusRepository(new \App\Menu));
         $this->a_rep = $a_rep;
         $this->c_rep = $c_rep;
+
     }
 
     /**
@@ -29,12 +32,15 @@ class ApplicationsController extends Controller
     public function index()
     {
         if(Gate::denies('view', new \App\Application)){
-            abort(403);
+           abort(403);
         }
 
         $applications = $this->getApplications();
-        return view('home')
-            -> with(['applications' => $applications]);
+
+        $this->template = 'home';
+        $this->vars = array_add($this->vars, 'applications', $applications);
+
+        return $this->renderOutput();
     }
 
     /**
@@ -78,8 +84,11 @@ class ApplicationsController extends Controller
     {
         $application = $this->a_rep->one($application->id, ['comments' => TRUE]);
 
-        return view('application')
-            ->with(['application' => $application]);
+        $this->template = 'application';
+        $this->vars = array_add($this->vars, 'application', $application);
+
+        return $this->renderOutput();
+
     }
 
     /**
@@ -90,8 +99,11 @@ class ApplicationsController extends Controller
      */
     public function edit(Application $application)
     {
-        return view('add_application')
-            ->with(['application' => $application]);
+        $this->template = 'add_application';
+        $this->vars = array_add($this->vars, 'application', $application);
+
+        return $this->renderOutput();
+
     }
 
     /**
@@ -137,7 +149,10 @@ class ApplicationsController extends Controller
     }
 
     public function add(){
-        return view('add_application');
+
+        $this->template = 'add_application';
+        return $this->renderOutput();
+
     }
 
     public function getApplications(){
