@@ -7,13 +7,11 @@ use Image;
 use Config;
 use Redirect;
 
+use App;
 
+ //use App\Helpers\Contracts\SaveStr;
 
-use App\Helpers\SaveEloquentOrm;
-use App\Helpers\SaveFile;
-
-
-use App\Helpers\Contracts\SaveStr;
+use SaveStr;
 
 class ApplicationsRepository extends Repository{
     public function __construct(Application $application) {
@@ -21,7 +19,7 @@ class ApplicationsRepository extends Repository{
     }
 
 
-    public function addApplication($request, $savestr)
+    public function addApplication($request /* ,$savestr */ )
     {
         $data = $request->except('_token');
 
@@ -39,12 +37,14 @@ class ApplicationsRepository extends Repository{
 
         $this->model->fill($data);
 
+        return SaveStr::save($request, $this->model);
 
-        return $savestr->save($request, $this->model);
-
-//        if($request->user()->applications()->save($this->model)){
-//            return ['status' => 'Приложение Добавлено!'];
-//        }
+      // $var = App::make('App\Helpers\Contracts\SaveStr');
+      //  $var = App::make('SaveStr'); // using alias
+      //  return $savestr->save($request, $this->model);
+      //  if($request->user()->applications()->save($this->model)){
+      //  return ['status' => 'Приложение Добавлено!'];
+      //  }
 
     }
 

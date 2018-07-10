@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Application;
-use App\Helpers\Contracts\SaveStr;
-use App\Helpers\SaveEloquentOrm;
+// use App\Helpers\Contracts\SaveStr;
+
 use App\Http\Requests\ApplicationRequest;
 use App\Repositories\ApplicationsRepository;
 
@@ -63,13 +63,13 @@ class ApplicationsController extends BaseController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ApplicationRequest $request, SaveStr $saveStr)
+    public function store(ApplicationRequest $request   /*, SaveStr $saveStr */ )
     {
         if(Gate::denies('add', new \App\Application)){
             abort(403);
         }
 
-        $result = $this->a_rep->addApplication($request, $saveStr);
+        $result = $this->a_rep->addApplication($request /*, $saveStr */ );
         if(is_array($result) && !empty($result['error'])){
             return back()->with($result);
         }
