@@ -28,41 +28,43 @@
                         <div class="w3-container">
                             <h2>List of Applications</h2>
 
-                            <table class="w3-table w3-striped">
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Image</th>
-                                    <th>URL</th>
-                                    <th>Action</th>
-                                </tr>
-                                @foreach($applications as $application)
+                            <div style="overflow-x:auto;">
+                                <table class="w3-table w3-striped">
                                     <tr>
-                                        <td>
-                                            <a href="{{ route('applications.show', ['id' => $application->id]) }}">
-                                                {{ $application->name }}
-                                            </a>
-                                        </td>
-                                        <td>
-                                            {!! mb_strimwidth($application->desc, 0, 50, "...")  !!}
-                                        <td>
-                                            <img src="{{ asset('/images/apps/'.$application->img) }}" alt="{{$application->name}}" title="{{$application->name}}"  style="width: 50%;"/>
-                                        </td>
-                                        <td>
-                                            <a href="{{ $application->url }}">{{ $application->url }}</a>
-                                        </td>
-                                        <td>
-                                            <a href="{{ route('applications.edit', [ 'id' => $application->id ]) }}">
-                                                <button class="button button-blue">Edit</button>
-                                            </a>
-                                            {!! Form::open(['url' => route('applications.destroy', ['id'=>$application->id]),'class'=>'form-horizontal','method'=>'POST']) !!}
-                                                {{ method_field('DELETE') }}
-                                                {!! Form::button('Delete', ['class' => 'button button-red','type'=>'submit']) !!}
-                                            {!! Form::close() !!}
-                                        </td>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Image</th>
+                                        <th>URL</th>
+                                        <th>Action</th>
                                     </tr>
-                                @endforeach
-                            </table>
+                                    @foreach($applications as $application)
+                                        <tr>
+                                            <td>
+                                                <a href="{{ route('applications.show', ['id' => $application->id]) }}">
+                                                    {{ $application->name }}
+                                                </a>
+                                            </td>
+                                            <td>
+                                                {!! mb_strimwidth($application->desc, 0, 50, "...")  !!}
+                                            <td>
+                                                <img src="{{ asset('/images/apps/'.$application->img) }}" alt="{{$application->name}}" title="{{$application->name}}"  style="width: 50%;"/>
+                                            </td>
+                                            <td>
+                                                <a href="{{ $application->url }}">{{ $application->url }}</a>
+                                            </td>
+                                            <td>
+                                                <a href="{{ route('applications.edit', [ 'id' => $application->id ]) }}">
+                                                    <button class="button button-blue">Edit</button>
+                                                </a>
+                                                {!! Form::open(['url' => route('applications.destroy', ['id'=>$application->id]),'class'=>'form-horizontal','method'=>'POST']) !!}
+                                                    {{ method_field('DELETE') }}
+                                                    {!! Form::button('Delete', ['class' => 'button button-red','type'=>'submit']) !!}
+                                                {!! Form::close() !!}
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </table>
+                            </div>
                         </div>
                         <br/>
                         <a href=" {{ route('add') }}">

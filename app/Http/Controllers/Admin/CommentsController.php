@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Application;
 use Illuminate\Http\Request;
@@ -9,7 +9,7 @@ use Response;
 use Auth;
 use App\Comment;
 
-class CommentsController extends Controller
+class CommentsController extends BaseController
 {
     /**
      * Display a listing of the resource.

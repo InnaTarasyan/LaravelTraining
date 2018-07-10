@@ -1,14 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Application;
+use App\Helpers\Contracts\SaveStr;
+use App\Helpers\SaveEloquentOrm;
 use App\Http\Requests\ApplicationRequest;
 use App\Repositories\ApplicationsRepository;
 
 use App\Repositories\CommentsRepository;
 use Gate;
 use Illuminate\Support\Facades\Auth;
+
+
 
 class ApplicationsController extends BaseController
 {
@@ -59,18 +63,18 @@ class ApplicationsController extends BaseController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ApplicationRequest $request)
+    public function store(ApplicationRequest $request, SaveStr $saveStr)
     {
         if(Gate::denies('add', new \App\Application)){
             abort(403);
         }
 
-        $result = $this->a_rep->addApplication($request);
+        $result = $this->a_rep->addApplication($request, $saveStr);
         if(is_array($result) && !empty($result['error'])){
             return back()->with($result);
         }
 
-        return redirect('applications')->with($result);
+        return redirect('/admin')->with($result);
 
     }
 
@@ -123,7 +127,7 @@ class ApplicationsController extends BaseController
             return back()->with($result);
         }
 
-        return redirect('applications')->with($result);
+        return redirect('/admin')->with($result);
 
     }
 
@@ -145,7 +149,7 @@ class ApplicationsController extends BaseController
             return back()->with($result);
         }
 
-        return redirect('/applications')->with($result);
+        return redirect('/admin')->with($result);
     }
 
     public function add(){

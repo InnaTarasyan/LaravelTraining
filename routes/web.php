@@ -11,10 +11,15 @@
 |
 */
 
-Route::get('/', 'ApplicationsController@index');
 
 Auth::routes();
 
-Route::get('/add', 'ApplicationsController@add')->name('add');
-Route::resource('applications', 'ApplicationsController');
-Route::resource('comments', 'CommentsController');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', 'Admin\ApplicationsController@index');
+    Route::get('/add', 'Admin\ApplicationsController@add')->name('add');
+    Route::resource('applications', 'Admin\ApplicationsController');
+    Route::resource('comments', 'Admin\CommentsController');
+});
+
+
+Route::get('/', 'HomeController@index');

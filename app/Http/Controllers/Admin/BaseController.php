@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Repositories\MenusRepository;
 use Illuminate\Http\Request;
 use Auth;
+use App\Http\Controllers\Controller;
 
 class BaseController extends Controller
 {
@@ -19,6 +20,7 @@ class BaseController extends Controller
     }
 
     public function renderOutput(){
+
         $menu = $this->getMenu();
         $navigation = view('navigation')->with('menu', $menu)->render();
         $this->vars = array_add($this->vars, 'navigation', $navigation);

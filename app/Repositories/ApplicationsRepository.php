@@ -7,13 +7,21 @@ use Image;
 use Config;
 use Redirect;
 
+
+
+use App\Helpers\SaveEloquentOrm;
+use App\Helpers\SaveFile;
+
+
+use App\Helpers\Contracts\SaveStr;
+
 class ApplicationsRepository extends Repository{
     public function __construct(Application $application) {
         $this->model = $application;
     }
 
 
-    public function addApplication($request)
+    public function addApplication($request, $savestr)
     {
         $data = $request->except('_token');
 
@@ -30,9 +38,13 @@ class ApplicationsRepository extends Repository{
         }
 
         $this->model->fill($data);
-        if($request->user()->applications()->save($this->model)){
-            return ['status' => 'Приложение Добавлено!'];
-        }
+
+
+        return $savestr->save($request, $this->model);
+
+//        if($request->user()->applications()->save($this->model)){
+//            return ['status' => 'Приложение Добавлено!'];
+//        }
 
     }
 
