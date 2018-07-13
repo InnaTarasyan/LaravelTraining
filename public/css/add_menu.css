@@ -1,0 +1,7 @@
+.content .contact-form li.text-field input, .content .contact-form li.checkbox-field input, .content .contact-form li.file-field input, .content .contact-form li select, .content .contact-form li textarea { margin-top:10px; padding:10px; }
+.content .contact-form li.text-field input, .content .contact-form li select { font-size: 12px; background-color:#fff; width:97.5%; }
+
+.content .contact-form ul {
+    margin: 0;
+    list-style: none;
+}

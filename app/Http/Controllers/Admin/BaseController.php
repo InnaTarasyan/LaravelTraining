@@ -29,20 +29,14 @@ class BaseController extends Controller
     }
 
     public function getMenu(){
-        $menu = $this->m_rep->get();
-        $mBuilder = \Menu::make('MyMenu', function ($m) use ($menu) {
 
-            foreach ($menu as $item){
-                if($item->parent == 0){
-                    $m->add($item->title, $item->path)->id($item->id);
-                } else{
-                    if($m->find($item->parent)){
-                        $m->find($item->parent)->add($item->title, $item->path)->id($item->id);
-                    }
-                }
-            }
+        return \Menu::make('adminMenu', function ($menu) {
+            $menu->add('Веб', array('route'  => 'applications.index'));
+            $menu->add('Андройд', array('route'  => 'applications.index'));
+            $menu->add('Меню',  array('route'  => 'menus.index'));
+            $menu->add('Привелегии', array('route'  => 'permissions.index'));
         });
 
-        return $mBuilder;
+
     }
 }

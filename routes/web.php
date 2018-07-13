@@ -20,7 +20,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('applications', 'Admin\ApplicationsController');
     Route::resource('comments', 'Admin\CommentsController');
     Route::resource('permissions', 'Admin\PermissionsController');
-
+    Route::resource('menus', 'Admin\MenusController');
 });
 
 

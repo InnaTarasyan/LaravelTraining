@@ -32,6 +32,7 @@
                                         @endforeach
                                     @endif
                                     </thead>
+                                    <br/>
                                     <tbody>
                                     @if(!$permissions->isEmpty())
                                         @foreach($permissions as $val)
@@ -55,6 +56,7 @@
                                 </table>
 
                             </div>
+                            <br/>
                             <input class="btn button-green" type="submit" value="Update" />
                         </form>
                     </div>
