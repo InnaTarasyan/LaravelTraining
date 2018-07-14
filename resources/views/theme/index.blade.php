@@ -46,13 +46,10 @@
             </div>
             <!--/.navbar-header-->
             <div id="main-nav" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav" id="mainNav">
-                    <li class="active"><a href="#home" class="scroll-link">Home</a></li>
-                    <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
-                    <li><a href="#skills" class="scroll-link">Skills</a></li>
-                    <li><a href="#experience" class="scroll-link">Experience</a></li>
-                    <li><a href="#portfolio" class="scroll-link">Portfolio</a></li>
-                    <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+                <ul class="nav navbar-nav" id="mainNav" style="margin-top: 21px;">
+                    @if(isset($menu))
+                        {!! $menu !!}
+                    @endif
                 </ul>
             </div>
             <!--/.navbar-collapse-->
@@ -409,140 +406,31 @@
             <nav id="filter" class="col-md-12 text-center">
                 <ul>
                     <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
-                    <li><a href="#" class="btn-theme btn-small" data-filter=".webdesign">Web Design</a></li>
-                    <li><a href="#" class="btn-theme btn-small" data-filter=".photography">Photography</a></li>
-                    <li><a href="#" class="btn-theme btn-small" data-filter=".print">Print</a></li>
+                    <li><a href="#" class="btn-theme btn-small" data-filter=".web_app">Web Application</a></li>
+                    <li><a href="#" class="btn-theme btn-small" data-filter=".android_app">Android Applications</a></li>
                 </ul>
             </nav>
             <div class="col-md-12">
                 <div class="row">
                     <div class="portfolio-items isotopeWrapper clearfix" id="3">
-
-                        <article class="col-sm-4 isotopeItem webdesign">
-                            <div class="portfolio-item">
-                                <img src="{{ asset('theme/images/portfolio/img1.jpg') }}" alt="" />
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <a href="{{ asset('theme/images/portfolio/img1.jpg') }}" class="fancybox">
-                                            <h5>Project Name</h5>
-                                            <i class="fa fa-arrows-alt fa-2x"></i></a>
+                        @foreach($apps as $app)
+                            <article class="col-sm-4 isotopeItem android_app">
+                                <div class="portfolio-item">
+                                    <img src="{{ asset('images/apps/'.$app->img) }}" alt="" />
+                                    <div class="portfolio-desc align-center">
+                                        <div class="folio-info">
+                                            <a href="{{ asset('images/apps/'.$app->img) }}" class="fancybox">
+                                                <h5>Project Name</h5>
+                                                <i class="fa fa-arrows-alt fa-2x"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </article>
-
-                        <article class="col-sm-4 isotopeItem photography">
-                            <div class="portfolio-item">
-                                <img src="{{ asset('theme/images/portfolio/img2.jpg') }}" alt="" />
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <a href="{{ asset('theme/images/portfolio/img2.jpg') }}" class="fancybox">
-                                            <h5>Project Name</h5>
-                                            <i class="fa fa-arrows-alt fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-
-                        <article class="col-sm-4 isotopeItem photography">
-                            <div class="portfolio-item">
-                                <img src="{{ asset('theme/images/portfolio/img3.jpg') }}" alt="" />
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <a href="{{ asset('theme/images/portfolio/img3.jpg') }}" class="fancybox">
-                                            <h5>Project Name</h5>
-                                            <i class="fa fa-arrows-alt fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-sm-4 isotopeItem print">
-                            <div class="portfolio-item">
-                                <img src="{{ asset('theme/images/portfolio/img4.jpg') }}" alt="" />
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <a href="{{ asset('theme/images/portfolio/img4.jpg') }}" class="fancybox">
-                                            <h5>Project Name</h5>
-                                            <i class="fa fa-arrows-alt fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-sm-4 isotopeItem photography">
-                            <div class="portfolio-item">
-                                <img src="{{ asset('theme/images/portfolio/img5.jpg') }}" alt="" />
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <a href="{{ asset('theme/images/portfolio/img5.jpg') }}" class="fancybox">
-                                            <h5>Project Name</h5>
-                                            <i class="fa fa-arrows-alt fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-sm-4 isotopeItem webdesign">
-                            <div class="portfolio-item">
-                                <img src="{{ asset('theme/images/portfolio/img6.jpg') }}" alt="" />
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <a href="{{ asset('theme/images/portfolio/img6.jpg') }}" class="fancybox">
-                                            <h5>Project Name</h5>
-                                            <i class="fa fa-arrows-alt fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-sm-4 isotopeItem print">
-                            <div class="portfolio-item">
-                                <img src="{{ asset('theme/images/portfolio/img7.jpg') }}" alt="" />
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <a href="{{ asset('theme/images/portfolio/img7.jpg') }}" class="fancybox">
-                                            <h5>Project Name</h5>
-                                            <i class="fa fa-arrows-alt fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-sm-4 isotopeItem photography">
-                            <div class="portfolio-item">
-                                <img src="{{ asset('theme/images/portfolio/img8.jpg') }}" alt="" />
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <a href="{{ asset('theme/images/portfolio/img8.jpg') }}" class="fancybox">
-                                            <h5>Project Name</h5>
-                                            <i class="fa fa-arrows-alt fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-sm-4 isotopeItem print">
-                            <div class="portfolio-item">
-                                <img src="{{ asset('theme/images/portfolio/img9.jpg') }}" alt="" />
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <a href="{{ asset('theme/images/portfolio/img9.jpg') }}" class="fancybox">
-                                            <h5>Project Name</h5>
-                                            <i class="fa fa-arrows-alt fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+                            </article>
+                        @endforeach
                     </div>
-
                 </div>
-
-
             </div>
         </div>
-
     </div>
 </section>
 

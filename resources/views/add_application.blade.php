@@ -17,12 +17,16 @@
                     @endif
 
                     <div class="card-body">
-                        {!! Form::open([ 'url' => (isset($application->id)) ? route('applications.update',['articles'=>$application->id]) : route('applications.store') ,'class'=>'contact-form','method'=>'POST','enctype'=>'multipart/form-data']) !!}
+                        {!! Form::open([ 'url' => (isset($application->id)) ? ( $currentUrl == 'applications.edit' ? route('applications.update', ['application'=>$application->id]) :  route('webapps.update', ['application'=>$application->id]) ) : ( $currentUrl == 'applications.create' ? route('applications.store') : route('webapps.store')) ,'class'=>'contact-form','method'=>'POST','enctype'=>'multipart/form-data']) !!}
                         {{ csrf_field() }}
                         {!! Form::text('name',isset($application->name) ? $application->name  : old('name'), ['placeholder'=> isset($application->name) ? 'Edit Application' : 'Add Application']) !!}
                         {!! Form::text('url',isset($application->url) ? $application->url  : old('url'), ['placeholder'=> isset($application->url) ? 'Edit Application URL' : 'Add Application URL']) !!}
 
                         {!! Form::textarea('desc', isset($application->desc) ? $application->desc  : old('desc'), ['id'=>'editor1','class' => 'form-control']) !!}
+
+                        <div class="input-prepend">
+                            {!! Form::select('type', $types, isset($application->type) ? ($application->type == "web" ? 0 : 1) : null) !!}
+                        </div>
 
                         @if(isset($application->img))
                             {{ Html::image(asset('/images/apps/'.$application->img),'',['style'=>'width:400px']) }}

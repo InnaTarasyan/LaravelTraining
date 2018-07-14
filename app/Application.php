@@ -11,7 +11,8 @@ class Application extends Model
         'desc',
         'img',
         'url',
-        'user_id'];
+        'user_id',
+        'type'];
 
     public function user(){
         return $this->belongsTo('App\User');

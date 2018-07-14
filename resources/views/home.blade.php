@@ -53,10 +53,10 @@
                                                 <a href="{{ $application->url }}">{{ $application->url }}</a>
                                             </td>
                                             <td>
-                                                <a href="{{ route('applications.edit', [ 'id' => $application->id ]) }}">
+                                                <a href="{{ (  $currentUrl == 'webapps.index' ?  route('webapps.edit', [ 'id' => $application->id ])  : route('applications.edit', [ 'id' => $application->id ]) ) }}">
                                                     <button class="button button-blue">Edit</button>
                                                 </a>
-                                                {!! Form::open(['url' => route('applications.destroy', ['id'=>$application->id]),'class'=>'form-horizontal','method'=>'POST']) !!}
+                                                {!! Form::open(['url' => ( $currentUrl == 'webapps.index' ?  route('webapps.destroy', ['id'=>$application->id])  : route('applications.destroy', ['id'=>$application->id]) ),'class'=>'form-horizontal','method'=>'POST']) !!}
                                                     {{ method_field('DELETE') }}
                                                     {!! Form::button('Delete', ['class' => 'button button-red','type'=>'submit']) !!}
                                                 {!! Form::close() !!}
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <br/>
-                        <a href=" {{ route('add') }}">
+                        <a href=" {{ $currentUrl == 'webapps.index' ? route('webapps.create') : route('applications.create') }}">
                             <button class="button button-green">Add New Application</button>
                         </a>
                         <br/>

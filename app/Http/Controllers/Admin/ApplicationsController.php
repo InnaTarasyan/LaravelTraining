@@ -10,14 +10,15 @@ use App\Repositories\ApplicationsRepository;
 
 use App\Repositories\CommentsRepository;
 use Gate;
-use Illuminate\Support\Facades\Auth;
-
+use Route;
 
 
 class ApplicationsController extends BaseController
 {
     protected $a_rep;
     protected $c_rep;
+    protected $currentUrl;
+    protected $type;
 
 
     public function __construct(ApplicationsRepository $a_rep, CommentsRepository $c_rep)
@@ -39,10 +40,31 @@ class ApplicationsController extends BaseController
            abort(403);
         }
 
+        $route = Route::currentRouteName();
+
+
+        switch ($route){
+            case "applications.index" : {
+                $this->type = 'apps';
+                $this->pageUrl = 'applications.index';
+                break;
+            }
+            case "webapps.index":  {
+                $this->type = 'web';
+                $this->pageUrl = 'webapps.index';
+                break;
+            }
+
+        }
+
+
+        $this->currentUrl = Route::currentRouteName();
+
         $applications = $this->getApplications();
 
         $this->template = 'home';
         $this->vars = array_add($this->vars, 'applications', $applications);
+        $this->vars = array_add($this->vars, 'currentUrl', $this->currentUrl);
 
         return $this->renderOutput();
     }
@@ -54,7 +76,14 @@ class ApplicationsController extends BaseController
      */
     public function create()
     {
-        //
+        $this->template = 'add_application';
+
+        $this->currentUrl = Route::currentRouteName();
+
+        $this->vars = array_add($this->vars, 'types', ['web', 'apps']);
+        $this->vars = array_add($this->vars, 'currentUrl', $this->currentUrl);
+
+        return $this->renderOutput();
     }
 
     /**
@@ -65,6 +94,7 @@ class ApplicationsController extends BaseController
      */
     public function store(ApplicationRequest $request   /*, SaveStr $saveStr */ )
     {
+
         if(Gate::denies('add', new \App\Application)){
             abort(403);
         }
@@ -74,7 +104,7 @@ class ApplicationsController extends BaseController
             return back()->with($result);
         }
 
-        return redirect('/admin')->with($result);
+        return redirect()->route('admin')->with($result);
 
     }
 
@@ -101,10 +131,16 @@ class ApplicationsController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Application $application)
+    public function edit($id)
     {
+        $application = Application::find($id);
+
         $this->template = 'add_application';
+        $this->currentUrl = Route::currentRouteName();
+
         $this->vars = array_add($this->vars, 'application', $application);
+        $this->vars = array_add($this->vars, 'currentUrl', $this->currentUrl);
+        $this->vars = array_add($this->vars, 'types', ['web', 'apps']);
 
         return $this->renderOutput();
 
@@ -117,17 +153,21 @@ class ApplicationsController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ApplicationRequest $request, Application $application)
+    public function update(ApplicationRequest $request, $id)
     {
         if(Gate::denies('update', new \App\Application)){
             abort(403);
         }
+
+        $application = Application::find($id);
+
         $result = $this->a_rep->updateApplication($request, $application);
         if(is_array($result) && !empty($result['error'])){
             return back()->with($result);
         }
 
-        return redirect('/admin')->with($result);
+
+        return redirect()->route('admin')->with($result);
 
     }
 
@@ -137,11 +177,13 @@ class ApplicationsController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Application $application)
+    public function destroy($id)
     {
         if(Gate::denies('delete', new \App\Application)){
             abort(403);
         }
+
+        $application = Application::find($id);
 
         $result = $this->a_rep->deleteApplication($application);
 
@@ -149,18 +191,15 @@ class ApplicationsController extends BaseController
             return back()->with($result);
         }
 
-        return redirect('/admin')->with($result);
-    }
 
-    public function add(){
-
-        $this->template = 'add_application';
-        return $this->renderOutput();
-
+        return redirect()->route('admin')->with($result);
     }
 
     public function getApplications(){
-        return $this->a_rep->get('*', FALSE, TRUE, FALSE);
+
+        $where = ['type', $this->type];
+
+        return $this->a_rep->get('*', FALSE, TRUE, $where);
     }
 
     public function getComments(){

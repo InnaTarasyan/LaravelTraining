@@ -15,9 +15,9 @@
 Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', 'Admin\ApplicationsController@index');
-    Route::get('/add', 'Admin\ApplicationsController@add')->name('add');
+    Route::get('/', 'Admin\AdminController@index')->name('admin');
     Route::resource('applications', 'Admin\ApplicationsController');
+    Route::resource('webapps', 'Admin\ApplicationsController');
     Route::resource('comments', 'Admin\CommentsController');
     Route::resource('permissions', 'Admin\PermissionsController');
     Route::resource('menus', 'Admin\MenusController');

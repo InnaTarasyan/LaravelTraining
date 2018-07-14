@@ -18,7 +18,6 @@ class ApplicationsRepository extends Repository{
         $this->model = $application;
     }
 
-
     public function addApplication($request /* ,$savestr */ )
     {
         $data = $request->except('_token');
@@ -34,6 +33,8 @@ class ApplicationsRepository extends Repository{
 
             }
         }
+
+        $data['type'] = ($data['type'] == 0) ? 'web' : 'apps';
 
         $this->model->fill($data);
 
@@ -54,6 +55,8 @@ class ApplicationsRepository extends Repository{
         if(empty($data)){
             return array(['error' => 'Нет Данных!']);
         }
+
+        $data['type'] = ($data['type'] == 0) ? 'web' : 'apps';
 
         if ($request->hasFile('img')) {
             $image = $request->file('img');
@@ -94,5 +97,6 @@ class ApplicationsRepository extends Repository{
 
         return $application;
     }
+
 
 }

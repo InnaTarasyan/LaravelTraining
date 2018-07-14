@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class AdminController extends BaseController
+{
+    public function index(){
+        $this->template = 'admin';
+        return $this->renderOutput();
+    }
+}

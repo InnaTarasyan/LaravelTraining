@@ -31,7 +31,8 @@ class BaseController extends Controller
     public function getMenu(){
 
         return \Menu::make('adminMenu', function ($menu) {
-            $menu->add('Веб', array('route'  => 'applications.index'));
+            $menu->add('Домой', array('route'  => 'admin'));
+            $menu->add('Веб', array('route'  => 'webapps.index'));
             $menu->add('Андройд', array('route'  => 'applications.index'));
             $menu->add('Меню',  array('route'  => 'menus.index'));
             $menu->add('Привелегии', array('route'  => 'permissions.index'));
