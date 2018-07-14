@@ -414,7 +414,7 @@
                 <div class="row">
                     <div class="portfolio-items isotopeWrapper clearfix" id="3">
                         @foreach($apps as $app)
-                            <article class="col-sm-4 isotopeItem android_app">
+                            <article class="col-sm-4 isotopeItem {{ $app->type == "apps" ? 'android_app' : 'web_app'}}">
                                 <div class="portfolio-item">
                                     <img src="{{ asset('images/apps/'.$app->img) }}" alt="" />
                                     <div class="portfolio-desc align-center">
