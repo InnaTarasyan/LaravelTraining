@@ -146,3 +146,26 @@ h3#comments-title span {
 .borGreen {
     border: 2px solid green !important;
 }
+
+#respond p.comment-form-author label, #respond p.comment-form-email label, #respond p.comment-form-url label {
+    height: 38px;
+}
+
+#respond p.comment-form-author label, #respond p.comment-form-email label, #respond p.comment-form-url label {
+    height: 38px;
+}
+#respond p.comment-form-url {
+    margin-right: 0;
+}
+
+#respond p.comment-form-author label, #respond p.comment-form-email label, #respond p.comment-form-url label {
+    height: 38px;
+}
+
+#respond .user-info{
+    padding: 10px 0 0px;
+    margin-bottom: 0;
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Repositories\ApplicationsRepository;
 use Illuminate\Http\Request;
 use App\Repositories\MenusRepository;
+use App\Application;
 
 class HomeController extends Controller
 {
@@ -16,10 +17,28 @@ class HomeController extends Controller
         $this->a_rep = $a_rep;
     }
 
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $application = $this->a_rep->one($id, ['comments' => TRUE]);
+
+        return view('theme.application')
+                   ->with(['application' => $application]);
+    }
+
     public function index(){
 
         $menu = $this->getMenu();
-        $apps = $this->getApplications();
+
+        $apps = $this->getApplications(['type', 'apps']);
+
+        $web_apps = $this->getApplications( ['type', 'web']);
 
         $navigation = view('navigation')
             ->with([ 'menu' => $menu])
@@ -27,7 +46,8 @@ class HomeController extends Controller
 
         return view('theme.index')
             ->with(['menu' => $navigation,
-                'apps' => $apps]);
+                'applications' => $apps,
+                'webapps' => $web_apps]);
     }
 
     public function getMenu()
@@ -52,7 +72,8 @@ class HomeController extends Controller
     }
 
 
-    public function getApplications(){
-        return $this->a_rep->get('*', FALSE, FALSE, FALSE);
+
+    public function getApplications($where){
+        return $this->a_rep->get('*', FALSE, TRUE, $where);
     }
 }

@@ -57,12 +57,10 @@
                         </div>
                         <br/>
 
-
                         <!-- END TRACKBACK & PINGBACK -->
                         <div id="respond">
                             <h3 id="reply-title">Leave a <span>Reply</span> <small><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;">Cancel reply</a></small></h3>
                             <form action="{{ route('comments.store') }}" method="post" id="commentform">
-
                                 <p class="comment-form-comment"><label for="comment">Your comment</label><textarea id="comment" name="text" cols="45" rows="8"></textarea></p>
                                 <div class="clear"></div>
                                 <p class="form-submit">
@@ -76,8 +74,6 @@
                         <!-- #respond -->
                     </div>
                     <!-- END COMMENTS -->
-
-
 
                     </div>
                 </div>
