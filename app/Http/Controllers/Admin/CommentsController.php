@@ -79,7 +79,7 @@ class CommentsController extends BaseController
         $data['hash'] = md5($data['email']);
         $data['created_at'] = $comment->created_at;
 
-        $view_comment = view('content_one_comment')
+        $view_comment = view('admin.content_one_comment')
             ->with(['data' => $data])
             ->render();
 

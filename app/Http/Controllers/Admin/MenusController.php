@@ -27,7 +27,7 @@ class MenusController extends BaseController
     {
         $menus = $this->getMenus();
 
-        $this->template = 'menus';
+        $this->template = 'admin.menus';
         $this->vars = array_add($this->vars, 'menus', $menus);
 
         return $this->renderOutput();
@@ -47,7 +47,7 @@ class MenusController extends BaseController
             return $returnMenus;
         }, ['0' => 'Родительский пункт меню']);
 
-        $this->template =  'menus_create_content';
+        $this->template =  'admin.menus_create_content';
         $this->vars = array_add($this->vars, 'menus', $menus);
         return $this->renderOutput();
 
@@ -96,7 +96,7 @@ class MenusController extends BaseController
             return $returnMenus;
         }, ['0' => 'Родительский пункт меню']);
 
-        $this->template =  'menus_create_content';
+        $this->template =  'admin.menus_create_content';
         $this->vars = array_add($this->vars, 'menus', $menus);
         $this->vars = array_add($this->vars, 'menu', $menu);
         return $this->renderOutput();

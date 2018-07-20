@@ -30,7 +30,7 @@ class PermissionsController extends BaseController
     {
         $this->title = 'Редактирование Привелегий!';
 
-        $this->template = 'permissions';
+        $this->template = 'admin.permissions';
 
         $this->vars = array_add($this->vars, 'permissions', $this->getPermissions());
         $this->vars = array_add($this->vars, 'roles', $this->getRoles());

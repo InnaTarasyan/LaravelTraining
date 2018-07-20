@@ -40,7 +40,7 @@ class HomeController extends Controller
 
         $web_apps = $this->getApplications( ['type', 'web']);
 
-        $navigation = view('navigation')
+        $navigation = view('admin.navigation')
             ->with([ 'menu' => $menu])
             ->render();
 

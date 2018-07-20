@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class AdminController extends BaseController
 {
     public function index(){
-        $this->template = 'admin';
+        $this->template = 'admin.admin';
         return $this->renderOutput();
     }
 }

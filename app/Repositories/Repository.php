@@ -1,6 +1,7 @@
 <?php
 namespace App\Repositories;
 use Config;
+use Request;
 
 abstract class Repository
 {
@@ -18,6 +19,10 @@ abstract class Repository
         }
 
         if($pagination){
+            if (Request::is('admin/*'))
+            {
+                return  $builder->paginate(4);
+            }
             return  $builder->paginate(Config::get('settings.paginate'));
         }
 

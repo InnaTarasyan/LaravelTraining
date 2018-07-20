@@ -34,7 +34,7 @@ class UsersController extends BaseController
 
         $users = $this->getUsers();
 
-        $this->template = 'users';
+        $this->template = 'admin.users';
         $this->vars = array_add($this->vars, 'users', $users);
 
         return $this->renderOutput();
@@ -47,7 +47,7 @@ class UsersController extends BaseController
      */
     public function create()
     {
-        $this->template = 'add_user';
+        $this->template = 'admin.add_user';
 
         if(Gate::denies('save', new \App\User)){
             abort(403);
@@ -113,7 +113,7 @@ class UsersController extends BaseController
             return $returnRoles;
         }, []);
 
-        $this->template = 'add_user';
+        $this->template = 'admin.add_user';
 
         $this->vars = array_add($this->vars, 'user', $user);
         $this->vars = array_add($this->vars, 'roles', $roles);

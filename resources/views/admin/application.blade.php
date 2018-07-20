@@ -29,9 +29,11 @@
                         <div class="w3-container">
                             <div style="text-align: center">
                                 <h4>Application {{$application->name}}</h4>
+                                <br/>
                                 <div>
                                     {!! $application->desc !!}
                                 </div>
+                                <br/>
                                 <div>
                                     {{ Html::image(asset('/images/apps/'.$application->img),'',['style'=>'width:400px']) }}
                                 </div>
@@ -48,7 +50,7 @@
                                                 @if($k !== 0)
                                                     @break
                                                 @endif
-                                                @include('comment',['items' => $comments])
+                                                @include('admin.comment',['items' => $comments])
                                             @endforeach
                                         </ol>
                                     @endif

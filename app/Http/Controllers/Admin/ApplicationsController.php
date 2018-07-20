@@ -62,7 +62,7 @@ class ApplicationsController extends BaseController
 
         $applications = $this->getApplications();
 
-        $this->template = 'home';
+        $this->template = 'admin.home';
         $this->vars = array_add($this->vars, 'applications', $applications);
         $this->vars = array_add($this->vars, 'currentUrl', $this->currentUrl);
 
@@ -76,7 +76,7 @@ class ApplicationsController extends BaseController
      */
     public function create()
     {
-        $this->template = 'add_application';
+        $this->template = 'admin.add_application';
 
         $this->currentUrl = Route::currentRouteName();
 
@@ -118,7 +118,7 @@ class ApplicationsController extends BaseController
     {
         $application = $this->a_rep->one($application->id, ['comments' => TRUE]);
 
-        $this->template = 'application';
+        $this->template = 'admin.application';
         $this->vars = array_add($this->vars, 'application', $application);
 
         return $this->renderOutput();
@@ -135,7 +135,7 @@ class ApplicationsController extends BaseController
     {
         $application = Application::find($id);
 
-        $this->template = 'add_application';
+        $this->template = 'admin.add_application';
         $this->currentUrl = Route::currentRouteName();
 
         $this->vars = array_add($this->vars, 'application', $application);

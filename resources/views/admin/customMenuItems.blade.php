@@ -6,7 +6,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" >
                 <ul id="nav" class="navbar-nav ml-auto sub-menu" style="display: block; list-style: none" >
-                    @include('customMenuItems',['items'=>$item->children()])
+                    @include('admin.customMenuItems',['items'=>$item->children()])
                 </ul>
             </div>
         </li>

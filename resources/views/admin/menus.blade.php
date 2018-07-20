@@ -29,7 +29,7 @@
                                 <br/>
                                 <tbody>
                                     @if($menus)
-                                        @include('custom-menu-items', array('items' => $menus->roots(),'paddingLeft' => ''))
+                                        @include('admin.custom-menu-items', array('items' => $menus->roots(),'paddingLeft' => ''))
                                     @endif
                                 </tbody>
                             </table>
