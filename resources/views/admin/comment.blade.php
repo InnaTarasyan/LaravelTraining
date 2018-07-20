@@ -31,7 +31,7 @@
 
         @if(isset($com[$item->id]))
             <ul class="children">
-                @include('comment',['items'=>$com[$item->id]])
+                @include('admin.comment',['items'=>$com[$item->id]])
             </ul>
         @endif
 

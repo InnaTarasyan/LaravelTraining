@@ -53,7 +53,7 @@
                                                         @if($k !== 0)
                                                             @break
                                                         @endif
-                                                        @include('comment',['items' => $comments])
+                                                        @include('admin.comment',['items' => $comments])
                                                     @endforeach
                                                 </ol>
                                             @endif
