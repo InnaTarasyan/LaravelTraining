@@ -21,6 +21,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('comments', 'Admin\CommentsController');
     Route::resource('permissions', 'Admin\PermissionsController');
     Route::resource('menus', 'Admin\MenusController');
+    Route::resource('users', 'Admin\UsersController');
 });
 
 

@@ -35,7 +35,29 @@ class PermissionsTableSeeder extends Seeder
                     'created_at' =>  NULL,
                     'updated_at' => NULL
 
+                ],
+                [
+                    'name' => 'VIEW_USERS',
+                    'created_at' =>  NULL,
+                    'updated_at' => NULL
+
+                ],[
+                    'name' => 'ADD_USERS',
+                    'created_at' =>  NULL,
+                    'updated_at' => NULL
+
+                ], [
+                    'name' => 'UPDATE_USERS',
+                    'created_at' =>  NULL,
+                    'updated_at' => NULL
+
+                ], [
+                    'name' => 'DELETE_USERS',
+                    'created_at' =>  NULL,
+                    'updated_at' => NULL
+
                 ]
+
             ];
 
             foreach ($permissions as $permission){

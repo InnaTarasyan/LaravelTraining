@@ -35,6 +35,7 @@ class BaseController extends Controller
             $menu->add('Веб', array('route'  => 'webapps.index'));
             $menu->add('Андройд', array('route'  => 'applications.index'));
             $menu->add('Меню',  array('route'  => 'menus.index'));
+            $menu->add('Пользователи',  array('route'  => 'users.index'));
             $menu->add('Привелегии', array('route'  => 'permissions.index'));
         });
 
