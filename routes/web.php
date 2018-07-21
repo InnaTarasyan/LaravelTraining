@@ -28,3 +28,6 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/', 'HomeController@index');
 Route::get('/show/{id}', 'HomeController@show')->name('show');
 Route::resource('comments', 'CommentsController');
+
+
+Route::get('/getapps', ['as' => 'datatable.getapps','uses' => 'HomeController@getAllApps']);

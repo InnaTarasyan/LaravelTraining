@@ -163,7 +163,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
-        App\Providers\SaveStrServiceProvider::class
+        App\Providers\SaveStrServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
 
     ],
 
@@ -216,7 +217,8 @@ return [
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
         'Image' => Intervention\Image\Facades\Image::class,
-        'SaveStr' => App\Helpers\Facades\SaveStr::class
+        'SaveStr' => App\Helpers\Facades\SaveStr::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class
 
     ],
 

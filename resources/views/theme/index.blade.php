@@ -1,393 +1,105 @@
-@extends('theme.base')
-@section('content')
-    @include('theme.header')
-    <!--/.header-->
-    <div id="#top"></div>
-    <section id="home">
-        {{--<div class="banner-container">--}}
-            {{--<img src="{{ asset('theme/images/banner-bg.jpg') }}" alt="banner" />--}}
-            {{--<div class="container banner-content">--}}
-                {{--<div id="da-slider" class="da-slider">--}}
-                    {{--<div class="da-slide">--}}
-                        {{--<h2>Webdesigner</h2>--}}
-                        {{--<p>Amazing free responsive website for free, enjoy!!!</p>--}}
-                        {{--<div class="da-img"></div>--}}
-                    {{--</div>--}}
-                    {{--<div class="da-slide">--}}
-                        {{--<h2>UX/UI Developer</h2>--}}
-                        {{--<p>I develop website using Bootstrap front-end framework..</p>--}}
-                        {{--<div class="da-img"></div>--}}
-                    {{--</div>--}}
-                    {{--<div class="da-slide">--}}
-                        {{--<h2>HTML5/CSS3</h2>--}}
-                        {{--<p>HTML5 is a markup language used for structuring and presenting Web.</p>--}}
-                        {{--<div class="da-img"></div>--}}
-                    {{--</div>--}}
-                    {{--<div class="da-slide">--}}
-                        {{--<h2>JavaScript/jQuery</h2>--}}
-                        {{--<p>jQuery: Write Less, Do More...</p>--}}
-                        {{--<div class="da-img"></div>--}}
-                    {{--</div>--}}
-                    {{--<!--  <nav class="da-arrows">--}}
-                            {{--<span class="da-arrows-prev"></span>--}}
-                            {{--<span class="da-arrows-next"></span>--}}
-                        {{--</nav> -->--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    </section>
-    {{--<section id="introText">--}}
-        {{--<div class="container">--}}
-            {{--<div class="text-center">--}}
-                {{--<h1>I create beautiful responsive websites, Yes I am a UX geek</h1>--}}
-                {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt volutpat. Cras eget augue id dui varius pretium. Cras posuere dolor risus. Pellentesque elementum ultricies quam, sit amet rhoncus nisl viverra in. Cras imperdiet nisi a euismod molestie. Ut a metus arcu. Pellentesque feugiat dictum erat. Nulla vehicula condimentum purus, quis imperdiet nisl ultricies eleifend. Nulla quis rhoncus risus. Ut vel vehicula urna.</p>--}}
-            {{--</div>--}}
-        {{--</div>--}}
+<html>
+   <head>
+       <!-- Latest compiled and minified CSS -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    {{--</section>--}}
-    <!--About-->
-    {{--<section id="aboutUs" class="secPad">--}}
-        {{--<div class="container">--}}
-            {{--<div class="heading text-center">--}}
-                {{--<!-- Heading -->--}}
-                {{--<h2>I am Sam, a UI Designer & developer</h2>--}}
-                {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>--}}
-            {{--</div>--}}
-            {{--<div class="row">--}}
-                {{--<!-- item -->--}}
-                {{--<div class="col-md-4 text-center tileBox">--}}
-                    {{--<div class="txtHead"> <i class="fa fa-desktop"></i>--}}
-                        {{--<h3>Responsive <span class="id-color">Design</span></h3></div>--}}
-                    {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt volutpat. Cras eget augue id dui varius pretium.</p>--}}
-                {{--</div>--}}
-                {{--<!-- end: -->--}}
+       <!-- Optional theme -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-                {{--<!-- item -->--}}
-                {{--<div class="col-md-4 text-center tileBox">--}}
-                    {{--<div class="txtHead"><i class="fa fa-css3"></i>--}}
-                        {{--<h3>HTML5/CSS3 <span class="id-color">Dev</span></h3></div>--}}
-                    {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt volutpat. Cras eget augue id dui varius pretium.</p>--}}
-                {{--</div>--}}
-                {{--<!-- end: -->--}}
-
-                {{--<!-- item -->--}}
-                {{--<div class="col-md-4 text-center tileBox">--}}
-                    {{--<div class="txtHead"><i class="fa fa-lightbulb-o"></i>--}}
-                        {{--<h3>JavaScript <span class="id-color">jQuery</span></h3></div>--}}
-                    {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt volutpat. Cras eget augue id dui varius pretium.</p>--}}
-                {{--</div>--}}
-                {{--<!-- end: -->--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</section>--}}
-    <!--Quote-->
-    {{--<section id="quote" class="bg-parlex">--}}
-        {{--<div class="parlex-back">--}}
-            {{--<div class="container secPad text-center">--}}
-                {{--<h2>If I asked people what they wanted, they would have said ‘Faster Horses’.</h2><h3>-Henry Ford</h3>--}}
-            {{--</div>--}}
-            {{--<!--/.container-->--}}
-        {{--</div>--}}
-    {{--</section>--}}
-
-    <!--Skills-->
-    {{--<section id="skills" class="secPad white">--}}
-        {{--<div class="container">--}}
-            {{--<div class="heading text-center">--}}
-                {{--<!-- Heading -->--}}
-                {{--<h2>My Skills</h2>--}}
-                {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>--}}
-            {{--</div>--}}
-            {{--<div class="row">--}}
-                {{--<div class="col-sm-6">--}}
-                    {{--<h2>Programming <strong>Skills</strong></h2>--}}
-                    {{--<p class="mrgBtm20">--}}
-                        {{--It takes knowledge, smart work, and dedication to make great ideas come to life. I have been helping make great ideas happen for the past 7 years and am always ready for new challenges.--}}
-
-                    {{--</p>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-2 skilltitle">HTML5</div>--}}
-                        {{--<div class="col-md-8">--}}
-                            {{--<div class="progress">--}}
-                                {{--<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">--}}
-                                    {{--<span class="sr-only">90% Complete</span>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-2 skilltitle">CSS/CC3</div>--}}
-                        {{--<div class="col-md-8">--}}
-                            {{--<div class="progress">--}}
-                                {{--<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">--}}
-                                    {{--<span class="sr-only">90% Complete</span>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-2 skilltitle">JavaScript</div>--}}
-                        {{--<div class="col-md-8">--}}
-                            {{--<div class="progress">--}}
-                                {{--<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">--}}
-                                    {{--<span class="sr-only">80% Complete</span>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-2 skilltitle">jQuery/Ajax</div>--}}
-                        {{--<div class="col-md-8">--}}
-                            {{--<div class="progress">--}}
-                                {{--<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">--}}
-                                    {{--<span class="sr-only">90% Complete</span>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-sm-6">--}}
-                    {{--<h2>Designing <strong>Skills</strong></h2>--}}
-                    {{--<p class="mrgBtm20">--}}
-                        {{--Problem solving is not always about sitting in a board room talking about the way things should be done. I have a strong background in UI design which allows me to think on my feet and act upon it.--}}
-
-                    {{--</p>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-2 skilltitle">Photoshop</div>--}}
-                        {{--<div class="col-md-8">--}}
-                            {{--<div class="progress">--}}
-                                {{--<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">--}}
-                                    {{--<span class="sr-only">90% Complete</span>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-2 skilltitle">Illustrator</div>--}}
-                        {{--<div class="col-md-8">--}}
-                            {{--<div class="progress">--}}
-                                {{--<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">--}}
-                                    {{--<span class="sr-only">80% Complete</span>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-2 skilltitle">Indesign</div>--}}
-                        {{--<div class="col-md-8">--}}
-                            {{--<div class="progress">--}}
-                                {{--<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">--}}
-                                    {{--<span class="sr-only">75% Complete</span>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</section>--}}
-
-    <!--Experience-->
-    {{--<section id="experience" class="secPad">--}}
-        {{--<div class="container">--}}
-            {{--<div class="heading text-center">--}}
-                {{--<!-- Heading -->--}}
-                {{--<h2>Professional Experience</h2>--}}
-                {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>--}}
-            {{--</div>--}}
-            {{--<div id="timeline"><div class="row timeline-movement timeline-movement-top">--}}
-                    {{--<div class="timeline-badge timeline-future-movement">--}}
-                        {{--<a href="#">--}}
-                            {{--<span class="glyphicon glyphicon-plus"></span>--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
-                    {{--<div class="timeline-badge timeline-filter-movement">--}}
-                        {{--<a href="#">--}}
-                            {{--<span class="glyphicon glyphicon-time"></span>--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
-
-                {{--</div>--}}
-                {{--<div class="row timeline-movement">--}}
-
-                    {{--<div class="timeline-badge">--}}
-                        {{--<span class="timeline-balloon-date-day">Feb</span>--}}
-                        {{--<span class="timeline-balloon-date-month">2014</span>--}}
-                    {{--</div>--}}
+       <link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+   </head>
+   <body>
+   {{--@if(isset($menu))--}}
+       {{--{!! $menu !!}--}}
+   {{--@endif--}}
 
 
-                    {{--<div class="col-sm-6  timeline-item">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-sm-11">--}}
-                                {{--<div class="timeline-panel credits">--}}
-                                    {{--<ul class="timeline-panel-ul">--}}
-                                        {{--<li><span class="importo">Mussum ipsum cacilds</span></li>--}}
-                                        {{--<li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>--}}
-                                        {{--<li><p><small class="text-muted"> 18/02/2014 - Present</small></p> </li>--}}
-                                    {{--</ul>--}}
-                                {{--</div>--}}
+   <nav class="navbar navbar-default">
+       <div class="container-fluid">
+           <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">Projects</a>
+           </div>
+           <div id="navbar" class="navbar-collapse collapse">
+               {{--<ul class="nav navbar-nav">--}}
+                   @if($menu)
+                       {!! $menu !!}
+                   @endif
+                   {{--<li class="active"><a href="#">Home</a></li>--}}
+                   {{--<li><a href="#">About</a></li>--}}
+                   {{--<li><a href="#">Contact</a></li>--}}
+                   {{--<li class="dropdown">--}}
+                       {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>--}}
+                       {{--<ul class="dropdown-menu">--}}
+                           {{--<li><a href="#">Action</a></li>--}}
+                           {{--<li><a href="#">Another action</a></li>--}}
+                           {{--<li><a href="#">Something else here</a></li>--}}
+                           {{--<li role="separator" class="divider"></li>--}}
+                           {{--<li class="dropdown-header">Nav header</li>--}}
+                           {{--<li><a href="#">Separated link</a></li>--}}
+                           {{--<li><a href="#">One more separated link</a></li>--}}
+                       {{--</ul>--}}
+                   {{--</li>--}}
+               {{--</ul>--}}
+               {{--<ul class="nav navbar-nav navbar-right">--}}
+                   {{--<li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>--}}
+                   {{--<li><a href="../navbar-static-top/">Static top</a></li>--}}
+                   {{--<li><a href="../navbar-fixed-top/">Fixed top</a></li>--}}
+               {{--</ul>--}}
+           </div><!--/.nav-collapse -->
+       </div><!--/.container-fluid -->
+   </nav>
 
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+   <h2>Dynamic Tabs</h2>
+   <ul class="nav nav-tabs">
+       <li class="active"><a data-toggle="tab" href="#home">Android Applications</a></li>
+       <li><a data-toggle="tab" href="#menu1">Web</a></li>
 
-                    {{--<div class="col-sm-6  timeline-item">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-sm-offset-1 col-sm-11">--}}
-                                {{--<div class="timeline-panel debits">--}}
-                                    {{--<ul class="timeline-panel-ul">--}}
-                                        {{--<li><span class="importo">Mussum ipsum cacilds</span></li>--}}
-                                        {{--<li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>--}}
-                                        {{--<li><p><small class="text-muted"> 18/02/2014 - Present</small></p> </li>--}}
-                                    {{--</ul>--}}
-                                {{--</div>--}}
+   </ul>
 
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+   <div class="tab-content">
+       <div id="home" class="tab-pane fade in active">
+           <h3>Android Applications</h3>
+           <p>
+           <div class="container">
+               <h2>Basic Table</h2>
+               <input type="hidden" id="apps_route" value="{{ route('datatable.getapps') }}">
+               <br/>
+               <div class="table-responsive">
+                   <table class="table" id="apps">
+                       <thead>
+                       <tr>
+                           <th> Name </th>
+                           <th> Desc </th>
+                           <th> Image </th>
+                           <th> Url </th>
+                       </tr>
+                       </thead>
+                   </table>
+               </div>
 
-                {{--<!--due -->--}}
-
-                {{--<div class="row timeline-movement">--}}
-
-
-                    {{--<div class="timeline-badge">--}}
-                        {{--<span class="timeline-balloon-date-day">Mar</span>--}}
-                        {{--<span class="timeline-balloon-date-month">2013</span>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="col-sm-offset-6 col-sm-6  timeline-item">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-sm-offset-1 col-sm-11">--}}
-                                {{--<div class="timeline-panel debits">--}}
-                                    {{--<ul class="timeline-panel-ul">--}}
-                                        {{--<li><span class="importo">Mussum ipsum cacilds</span></li>--}}
-                                        {{--<li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>--}}
-                                        {{--<li><p><small class="text-muted"> 10/03/2013 - 18/02/2014</small></p> </li>--}}
-                                    {{--</ul>--}}
-                                {{--</div>--}}
-
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="col-sm-6  timeline-item">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-sm-11">--}}
-                                {{--<div class="timeline-panel credits">--}}
-                                    {{--<ul class="timeline-panel-ul">--}}
-                                        {{--<li><span class="importo">Mussum ipsum cacilds</span></li>--}}
-                                        {{--<li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>--}}
-                                        {{--<li><p><small class="text-muted"> 10/03/2013 - 18/02/2014</small></p> </li>--}}
-                                    {{--</ul>--}}
-                                {{--</div>--}}
-
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-
-                {{--</div>--}}
-                {{--<div class="row timeline-movement">--}}
-
-
-                    {{--<div class="timeline-badge">--}}
-                        {{--<span class="timeline-balloon-date-day">Jan</span>--}}
-                        {{--<span class="timeline-balloon-date-month">2010</span>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="col-sm-offset-6 col-sm-6  timeline-item">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-sm-offset-1 col-sm-11">--}}
-                                {{--<div class="timeline-panel debits">--}}
-                                    {{--<ul class="timeline-panel-ul">--}}
-                                        {{--<li><span class="importo">Mussum ipsum cacilds</span></li>--}}
-                                        {{--<li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>--}}
-                                        {{--<li><p><small class="text-muted"> 11/01/2010 - 10/03/2013</small></p> </li>--}}
-                                    {{--</ul>--}}
-                                {{--</div>--}}
-
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="col-sm-6  timeline-item">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-sm-11">--}}
-                                {{--<div class="timeline-panel credits">--}}
-                                    {{--<ul class="timeline-panel-ul">--}}
-                                        {{--<li><span class="importo">Mussum ipsum cacilds</span></li>--}}
-                                        {{--<li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>--}}
-                                        {{--<li><p><small class="text-muted"> 11/01/2010 - 10/03/2013</small></p> </li>--}}
-                                    {{--</ul>--}}
-                                {{--</div>--}}
-
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+           </div>
+           </p>
+       </div>
+       <div id="menu1" class="tab-pane fade">
+           <h3> Web Applications</h3>
+           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       </div>
+   </div>
 
 
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
 
-    {{--</section>--}}
-
-
-    @include('theme.portfolio')
-
-    {{--<!--Contact -->--}}
-    {{--<section id="contactUs" class="page-section secPad">--}}
-        {{--<div class="container">--}}
-
-            {{--<div class="row">--}}
-                {{--<div class="heading text-center">--}}
-                    {{--<!-- Heading -->--}}
-                    {{--<h2>Let's Keep In Touch!</h2>--}}
-                    {{--<p>Thank you for visiting out my profile. If you would like to get into contact with me, please fill out the form below.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="row mrgn30">--}}
-
-                {{--<form method="post" action="" id="contactfrm" role="form">--}}
-
-                    {{--<div class="col-sm-4">--}}
-                        {{--<div class="form-group">--}}
-                            {{--<label for="name">Name</label>--}}
-                            {{--<input type="text" class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)">--}}
-                        {{--</div>--}}
-                        {{--<div class="form-group">--}}
-                            {{--<label for="email">Email</label>--}}
-                            {{--<input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address">--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-sm-4">--}}
-                        {{--<div class="form-group">--}}
-                            {{--<label for="comments">Comments</label>--}}
-                            {{--<textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>--}}
-                        {{--</div>--}}
-                        {{--<button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>--}}
-                        {{--<div class="result"></div>--}}
-                    {{--</div>--}}
-                {{--</form>--}}
-                {{--<div class="col-sm-4">--}}
-                    {{--<h4>Address:</h4>--}}
-                    {{--<address>--}}
-                        {{--WebThemez Company<br>--}}
-                        {{--134 Stilla. Tae., 414515<br>--}}
-                        {{--Leorislon, SA 02434-34534 USA--}}
-                        {{--<br>--}}
-                    {{--</address>--}}
-                    {{--<h4>Phone:</h4>--}}
-                    {{--<address>--}}
-                        {{--12345-49589-2<br>--}}
-                    {{--</address>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<!--/.container-->--}}
-    {{--</section>--}}
-@endsection
-
+   </body>
+   <footer>
+       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+       <!-- Latest compiled and minified JavaScript -->
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+       <script src="{{ asset('js/theme/home.js') }}"></script>
+   </footer>
+</html>

@@ -30,9 +30,14 @@
     <!-- Font Awesome -->
     <link href="{{ asset('theme/font/css/font-awesome.min.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
     <link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/datatables.css') }}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+
+    <style>
+
+    </style>
+
     @yield('css')
 </head>
 <body>
@@ -75,5 +80,9 @@
 <script src="{{ asset('theme/js/jquery.cslider.js') }}" type="text/javascript"></script>
 <script src="{{ asset('theme/js/custom.js') }}" type="text/javascript"></script>
 <script src="{{ asset('theme/js/owl-carousel/owl.carousel.js') }}"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+<script src="{{ asset('js/theme/home.js') }}"></script>
+
 @yield('scripts')
 </html>
