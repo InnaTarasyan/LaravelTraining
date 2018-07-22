@@ -7,12 +7,9 @@
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+       <link rel="stylesheet" href="{{asset('css/modal.css')}}">
    </head>
    <body>
-   {{--@if(isset($menu))--}}
-       {{--{!! $menu !!}--}}
-   {{--@endif--}}
-
 
    <nav class="navbar navbar-default">
        <div class="container-fluid">
@@ -26,74 +23,89 @@
                <a class="navbar-brand" href="#">Projects</a>
            </div>
            <div id="navbar" class="navbar-collapse collapse">
-               {{--<ul class="nav navbar-nav">--}}
-                   @if($menu)
-                       {!! $menu !!}
-                   @endif
-                   {{--<li class="active"><a href="#">Home</a></li>--}}
-                   {{--<li><a href="#">About</a></li>--}}
-                   {{--<li><a href="#">Contact</a></li>--}}
-                   {{--<li class="dropdown">--}}
-                       {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>--}}
-                       {{--<ul class="dropdown-menu">--}}
-                           {{--<li><a href="#">Action</a></li>--}}
-                           {{--<li><a href="#">Another action</a></li>--}}
-                           {{--<li><a href="#">Something else here</a></li>--}}
-                           {{--<li role="separator" class="divider"></li>--}}
-                           {{--<li class="dropdown-header">Nav header</li>--}}
-                           {{--<li><a href="#">Separated link</a></li>--}}
-                           {{--<li><a href="#">One more separated link</a></li>--}}
-                       {{--</ul>--}}
-                   {{--</li>--}}
-               {{--</ul>--}}
-               {{--<ul class="nav navbar-nav navbar-right">--}}
-                   {{--<li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>--}}
-                   {{--<li><a href="../navbar-static-top/">Static top</a></li>--}}
-                   {{--<li><a href="../navbar-fixed-top/">Fixed top</a></li>--}}
-               {{--</ul>--}}
+               @if($menu)
+                   {!! $menu !!}
+               @endif
            </div><!--/.nav-collapse -->
        </div><!--/.container-fluid -->
    </nav>
 
+
+
+   <!-- The Modal -->
+   <div id="myModal" class="modal">
+
+       <!-- The Close Button -->
+       <span class="close">&times;</span>
+
+       <!-- Modal Content (The Image) -->
+       <img class="modal-content" id="img01">
+
+       <!-- Modal Caption (Image Text) -->
+       <div id="caption"></div>
+   </div>
+
+
    <h2>Dynamic Tabs</h2>
    <ul class="nav nav-tabs">
        <li class="active"><a data-toggle="tab" href="#home">Android Applications</a></li>
-       <li><a data-toggle="tab" href="#menu1">Web</a></li>
-
+       <li><a data-toggle="tab" href="#menu1">Web Applications</a></li>
    </ul>
 
    <div class="tab-content">
        <div id="home" class="tab-pane fade in active">
            <h3>Android Applications</h3>
            <p>
+               <div class="container">
+                   <h2>Android Apps Table</h2>
+                   <input type="hidden" id="apps_route" value="{{ route('datatable.get_android_apps', ['type' => 'apps']) }}">
+                   <br/>
+                   <div class="table-responsive">
+                       <table class="table" id="apps">
+                           <thead>
+                           <tr>
+                               <th> Name </th>
+                               <th> Desc </th>
+                               <th> Image </th>
+                               <th> Url </th>
+                               <th> Download Count </th>
+                           </tr>
+                           </thead>
+                       </table>
+                   </div>
+               </div>
+           </p>
+       </div>
+       <div id="menu1" class="tab-pane fade">
+           <h3> Web Applications</h3>
+           <p>
            <div class="container">
-               <h2>Basic Table</h2>
-               <input type="hidden" id="apps_route" value="{{ route('datatable.getapps') }}">
+               <h2>Web Apps Table</h2>
+               <input type="hidden" id="web_route" value="{{ route('datatable.get_web_apps', ['type' => 'web']) }}">
                <br/>
                <div class="table-responsive">
-                   <table class="table" id="apps">
+                   <table class="table" id="web" style="width: 100%">
                        <thead>
                        <tr>
                            <th> Name </th>
                            <th> Desc </th>
                            <th> Image </th>
                            <th> Url </th>
+                           <th> Download Count </th>
                        </tr>
                        </thead>
                    </table>
                </div>
-
            </div>
            </p>
        </div>
-       <div id="menu1" class="tab-pane fade">
-           <h3> Web Applications</h3>
-           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       </div>
    </div>
 
-
-
+   <div id="aboutUs">About Us</div>
+   <div id="skills">Skills</div>
+   <div id="home">
+       <a href="#">Home</a>
+   </div>
    </body>
    <footer>
        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

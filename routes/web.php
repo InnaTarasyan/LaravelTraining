@@ -29,5 +29,5 @@ Route::get('/', 'HomeController@index');
 Route::get('/show/{id}', 'HomeController@show')->name('show');
 Route::resource('comments', 'CommentsController');
 
-
-Route::get('/getapps', ['as' => 'datatable.getapps','uses' => 'HomeController@getAllApps']);
+Route::get('/get_android_apps/{type}', ['as' => 'datatable.get_android_apps','uses' => 'HomeController@getAndroidApps']);
+Route::get('/get_web_apps/{type}', ['as' => 'datatable.get_web_apps','uses' => 'HomeController@getAndroidApps']);
