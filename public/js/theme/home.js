@@ -87,7 +87,7 @@ Home.prototype.init = function () {
 };
 
 function myMap() {
-    var myCenter = new google.maps.LatLng(40.177200, 44.503490);
+    var myCenter = new google.maps.LatLng(40.182344, 44.513337);
     var mapCanvas = document.getElementById("map");
     var mapOptions = {center: myCenter, zoom: 6};
     var map = new google.maps.Map(mapCanvas, mapOptions);
