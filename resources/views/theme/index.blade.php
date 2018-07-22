@@ -8,6 +8,7 @@
 
        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
        <link rel="stylesheet" href="{{asset('css/modal.css')}}">
+       <link rel="stylesheet" href="{{asset('css/datatables.css')}}">
    </head>
    <body>
 
@@ -61,7 +62,7 @@
                    <input type="hidden" id="apps_route" value="{{ route('datatable.get_android_apps', ['type' => 'apps']) }}">
                    <br/>
                    <div class="table-responsive">
-                       <table class="table" id="apps">
+                       <table class="table table-striped" id="apps">
                            <thead>
                            <tr>
                                <th> Name </th>
@@ -84,14 +85,13 @@
                <input type="hidden" id="web_route" value="{{ route('datatable.get_web_apps', ['type' => 'web']) }}">
                <br/>
                <div class="table-responsive">
-                   <table class="table" id="web" style="width: 100%">
+                   <table class="table table-striped" id="web" style="width: 100%">
                        <thead>
                        <tr>
                            <th> Name </th>
                            <th> Desc </th>
                            <th> Image </th>
                            <th> Url </th>
-                           <th> Download Count </th>
                        </tr>
                        </thead>
                    </table>

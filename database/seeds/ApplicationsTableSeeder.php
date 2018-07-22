@@ -21,7 +21,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 75
                 ]
             ]);
             // отсюда меняем
@@ -34,7 +35,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 49
                 )
             ));
 
@@ -48,7 +50,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 49
                 )
             ));
 
@@ -61,7 +64,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 49
                 )
             ));
 
@@ -74,7 +78,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 50
                 )
             ));
 
@@ -87,7 +92,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 53
                 )
             ));
 
@@ -100,7 +106,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 52
                 )
             ));
 
@@ -113,7 +120,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 47
                 )
             ));
 
@@ -126,7 +134,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 43
                 )
             ));
 
@@ -139,7 +148,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 61
                 )
             ));
 
@@ -152,7 +162,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 56
                 )
             ));
 
@@ -165,7 +176,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 61
                 )
             ));
 
@@ -178,7 +190,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 44
                 )
             ));
 
@@ -191,7 +204,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 58
                 )
             ));
 
@@ -204,7 +218,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 54
                 )
             ));
 
@@ -217,7 +232,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 51
                 )
             ));
 
@@ -230,7 +246,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 58
                 )
             ));
 
@@ -243,7 +260,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 48
                 )
             ));
 
@@ -256,7 +274,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 76
                 )
             ));
 
@@ -269,7 +288,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 48
                 )
             ));
 
@@ -282,7 +302,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 55
                 )
             ));
 
@@ -295,7 +316,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 48
                 )
             ));
 
@@ -308,7 +330,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 312
                 )
             ));
 
@@ -321,20 +344,22 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 49
                 )
             ));
 
             DB::table('applications')->insert(array(
                 array(
-                    'name' => 'My_Calculator.',
+                    'name' => 'My Contact List.',
                     'desc' => 'This application is designed for the following purposes: Add Contact Add Group Contact View Contact Details View SMS History View Call History View Contacts in Descending order Search Contact By Email Search Contact By Phone Send SMS Update Contact Email.',
-                    'img' => 'My_Calculator.jpg',
+                    'img' => 'My_Contact_List.jpg',
                     'url' => 'https://www.amazon.com/Inna-Tarasyan-My-Calculator/dp/B0196HMGDQ/ref=sr_1_27?s=mobile-apps&ie=UTF8&qid=1531046218&sr=1-27',
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 115
                 )
             ));
 
@@ -347,7 +372,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 45
                 )
             ));
 
@@ -360,7 +386,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 48
                 )
             ));
 
@@ -373,7 +400,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 65
                 )
             ));
 
@@ -386,7 +414,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 45
                 )
             ));
 
@@ -399,7 +428,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 51
                 )
             ));
 
@@ -412,7 +442,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 53
                 )
             ));
 
@@ -425,7 +456,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 50
                 )
             ));
 
@@ -438,7 +470,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 130
                 )
             ));
 
@@ -451,7 +484,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 6
                 )
             ));
 
@@ -464,7 +498,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 51
                 )
             ));
 
@@ -477,7 +512,8 @@ class ApplicationsTableSeeder extends Seeder
                     'user_id' => 1,
                     'created_at' =>  NULL,
                     'updated_at' => NULL,
-                    'type' => 'apps'
+                    'type' => 'apps',
+                    'download_count' => 305
                 )
             ));
 

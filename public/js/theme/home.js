@@ -56,8 +56,7 @@ Home.prototype.init = function () {
             {data: 'name', name: 'name', "defaultContent" : 'Not Set'},
             {data: 'desc', name: 'desc', "defaultContent" : 'Not Set'},
             {data: 'img', name: 'img', "defaultContent" : 'Not Set'},
-            {data: 'url', name: 'url', "defaultContent" : 'Not Set'},
-            {data: 'download_count', name: 'download_count', "defaultContent" : 'Not Set'}
+            {data: 'url', name: 'url', "defaultContent" : 'Not Set'}
         ],
         "aaSorting": [[ 1, "asc" ]],
         "fnRowCallback": function( nRow, aData, iDisplayIndex ) {

@@ -1,10 +1,6 @@
-@extends('theme.base')
-@section('css')
+
     <link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/comments.css') }}">
-@endsection
-@section('content')
-    @include('theme.header')
 
     <section id="portfolio" class="page-section section appear clearfix secPad">
         <div class="container">
@@ -94,8 +90,6 @@
         </div>
     </section>
 
-@endsection
-@section('scripts')
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="{{ asset('/js/comment-reply.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/js/myscripts.js') }}"></script>
-@endsection
