@@ -25,9 +25,11 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/show/{id}', 'HomeController@show')->name('show');
 Route::resource('comments', 'CommentsController');
 
 Route::get('/get_android_apps/{type}', ['as' => 'datatable.get_android_apps','uses' => 'HomeController@getAndroidApps']);
 Route::get('/get_web_apps/{type}', ['as' => 'datatable.get_web_apps','uses' => 'HomeController@getAndroidApps']);
+
+Route::post('/about', ['uses' => 'HomeController@about', 'as' => 'about']);

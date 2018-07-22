@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use App\Repositories\MenusRepository;
 use App\Application;
 use Yajra\DataTables\Facades\DataTables as Datatables;
+use Validator;
+use Mail;
+use Config;
+use Session;
+use Redirect;
 
 class HomeController extends Controller
 {
@@ -42,7 +47,8 @@ class HomeController extends Controller
 
 
         return view('theme.index')
-            ->with(['menu' => $navigation]);
+            ->with(['menu' => $navigation,
+                'key' => env('GOOGLEAPIS_KEY')]);
     }
 
     public function getMenu()
@@ -85,5 +91,39 @@ class HomeController extends Controller
             })
             ->rawColumns(['name', 'img', 'url'])
             ->make(true);
+    }
+
+
+    public function about(Request $request){
+
+            $input = $request->except('_token');
+
+            $messages = [
+                'required' => 'Field :attribute is required'
+            ];
+
+            $validator = Validator::make($input, [
+                'name' => 'required|max:100',
+                'email' => 'required|email|max:100',
+                'text' => 'required|max:255'
+            ], $messages);
+
+            if($validator->fails()){
+                return redirect()->route('home')->withErrors($validator)->withInput();
+            }
+
+            $data = $request->all();
+
+            $result = Mail::send('theme.email', ['data' => $data], function ($message) use ($data){
+                $mail_admin = env('mail_admin');
+                $message->from($data['email'], $data['name']);
+                $message->to($mail_admin)->subject('Feedback');
+                Session::flash('status', 'Email is sent!');
+
+            });
+
+        return Redirect::back();
+
+
     }
 }
