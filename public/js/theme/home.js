@@ -12,7 +12,7 @@ Home.prototype.init = function () {
         "processing": true,
         "serverSide": true,
         "ajax": $('#apps_route').val(),
-        "pageLength": 5,
+        "pageLength": 4,
         "columns": [
             {data: 'name', name: 'name', "defaultContent" : 'Not Set'},
             {data: 'desc', name: 'desc', "defaultContent" : 'Not Set'},
@@ -51,7 +51,7 @@ Home.prototype.init = function () {
         "processing": true,
         "serverSide": true,
         "ajax": $('#web_route').val(),
-        "pageLength": 5,
+        "pageLength": 4,
         "columns": [
             {data: 'name', name: 'name', "defaultContent" : 'Not Set'},
             {data: 'desc', name: 'desc', "defaultContent" : 'Not Set'},

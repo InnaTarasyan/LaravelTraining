@@ -11,93 +11,7 @@
        <link rel="stylesheet" href="{{asset('css/datatables.css')}}">
        <link rel="stylesheet" href="{{asset('css/timeline.css')}}">
        <link rel="stylesheet" href="{{asset('css/about_us.css')}}">
-       <style>
-           #topBtn {
-               display: none;
-               position: fixed;
-               bottom: 20px;
-               right: 30px;
-               z-index: 99;
-               font-size: 18px;
-               border: none;
-               outline: none;
-               background-color: red;
-               color: white;
-               cursor: pointer;
-               padding: 15px;
-               border-radius: 4px;
-           }
-
-           #topBtn:hover {
-               background-color: #555;
-           }
-
-
-           .bgimage {
-               width:100%;
-               height:500px;
-               background: url('images/Inna_3.jpg');
-               background-repeat: no-repeat;
-               background-position: center;
-               background-size:cover;
-               background-attachment: fixed;
-           }
-           .bgimage h5 {
-               color:white;
-               text-shadow:2px 2px #333;
-           }
-
-
-           marquee {
-               margin-top: 5px;
-               width: 100%;
-           }
-
-           .runtext-container {
-               background-color:rgba(0, 0, 0, 0.5);
-               background-repeat:repeat-x;
-
-               box-shadow:0 5px 20px rgba(0, 0, 0, 0.9);
-
-               width: 850px;
-               overflow-x: hidden;
-               overflow-y: visible;
-               margin: 0 60px 0 30px;
-               padding:0 3px 0 3px;
-           }
-
-           .main-runtext {margin: 0 auto;
-               overflow: visible;
-               position: relative;
-               height: 40px;
-           }
-
-           .runtext-container .holder {
-               position: relative;
-               overflow: visible;
-               display:inline;
-               float:left;
-
-           }
-
-           .runtext-container .holder .text-container {
-               display:inline;
-           }
-
-           .runtext-container .holder a{
-               text-decoration: none;
-               font-weight: bold;
-               color:#ff0000;
-               text-shadow:0 -1px 0 rgba(0,0,0,0.25);
-               line-height: -0.5em;
-               font-size:16px;
-           }
-
-           .runtext-container .holder a:hover{
-               text-decoration: none;
-               color:#6600ff;
-           }
-       </style>
+       <link rel="stylesheet" href="{{asset('css/home.css')}}">
    </head>
    <body>
 
@@ -179,21 +93,23 @@
 
    </div>
 
-   <div id="skills">
+   <div id="education">
        <div class="container">
-           <div class="page-header">
-               <h1 id="timeline" style="text-align: center">Education and Experience</h1>
+           <div class="site-title text-center ">
+               <h3>Education and Experience</h3>
            </div>
            <ul class="timeline">
                <li>
                    <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
                    <div class="timeline-panel">
                        <div class="timeline-heading">
-                           <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                           <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
+                           <h4 class="timeline-title">American University of Armenia</h4>
                        </div>
                        <div class="timeline-body">
-                           <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                           <p>Department of Computer Science (CIS).
+                               Master’s degree.<br>
+                               (2011 – 2014)
+                           </p>
                        </div>
                    </div>
                </li>
@@ -201,11 +117,14 @@
                    <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
                    <div class="timeline-panel">
                        <div class="timeline-heading">
-                           <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                           <h4 class="timeline-title">State Engineering University of Armenia</h4>
                        </div>
                        <div class="timeline-body">
-                           <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                           <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+                           <p>Control and Informatics in Technical Systems.
+                               Department of Cybernetics.
+                               Master's  degree. <br>
+                               (2010 – 2012)
+                           </p>
                        </div>
                    </div>
                </li>
@@ -213,20 +132,28 @@
                    <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
                    <div class="timeline-panel">
                        <div class="timeline-heading">
-                           <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                           <h4 class="timeline-title">State Engineering University of Armenia</h4>
                        </div>
                        <div class="timeline-body">
-                           <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                           <p>Control and Informatics in Technical Systems.
+                               Department of Cybernetics.
+                               Bachelor degree.<br/>
+                               (2006– 2010)
+                           </p>
                        </div>
                    </div>
                </li>
                <li class="timeline-inverted">
+                   <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
                    <div class="timeline-panel">
                        <div class="timeline-heading">
-                           <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                           <h4 class="timeline-title">Microsoft Innovation Center. Yerevan</h4>
                        </div>
                        <div class="timeline-body">
-                           <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                           <p>C++ training (Level 1), C++ training (Level 2).<br>
+                               C# training (Level 2), Course of ADO.NET & ASP.NET<br>
+                               (2011 – 2012)
+                           </p>
                        </div>
                    </div>
                </li>
@@ -234,53 +161,100 @@
                    <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
                    <div class="timeline-panel">
                        <div class="timeline-heading">
-                           <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                           <h4 class="timeline-title">Iguana system. Yerevan.</h4>
                        </div>
                        <div class="timeline-body">
-                           <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                           <hr>
-                           <div class="btn-group">
-                               <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                   <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
-                               </button>
-                               <ul class="dropdown-menu" role="menu">
-                                   <li><a href="#">Action</a></li>
-                                   <li><a href="#">Another action</a></li>
-                                   <li><a href="#">Something else here</a></li>
-                                   <li class="divider"></li>
-                                   <li><a href="#">Separated link</a></li>
-                               </ul>
-                           </div>
-                       </div>
-                   </div>
-               </li>
-               <li>
-                   <div class="timeline-panel">
-                       <div class="timeline-heading">
-                           <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                       </div>
-                       <div class="timeline-body">
-                           <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                           <p>Web Developer. Implemented inner system enhancement and bugs correction, improvements on design and functionality, worked with databases<br>
+                               (December 2017 – May 2018)</p>
                        </div>
                    </div>
                </li>
                <li class="timeline-inverted">
-                   <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                   <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
                    <div class="timeline-panel">
                        <div class="timeline-heading">
-                           <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                           <h4 class="timeline-title">Helix Consulting LLC. Yerevan.</h4>
                        </div>
                        <div class="timeline-body">
-                           <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                           <p>Web Developer.Maintaining performance of existing client websites.<br>
+                               (September 2017 – December 2017)
+                           </p>
                        </div>
                    </div>
                </li>
+               <li>
+                   <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                   <div class="timeline-panel">
+                       <div class="timeline-heading">
+                           <h4 class="timeline-title">SoftCode LLC. Yerevan</h4>
+                       </div>
+                       <div class="timeline-body">
+                           <p>Web Developer.
+                               Maintaining performance of existing client websites.
+                               Suggesting improvements on design and functionality. <br>
+                               (February 2016 – July 2017)
+                           </p>
+                       </div>
+                   </div>
+               </li>
+               <li class="timeline-inverted">
+                   <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+                   <div class="timeline-panel">
+                       <div class="timeline-heading">
+                           <h4 class="timeline-title">Rosgosstrakh Armenia Insurance CJSC. Yerevan</h4>
+                       </div>
+                       <div class="timeline-body">
+                           <p>Web Developer. Implemented inner system enhancement and bugs correction, improvements on design and functionality, worked with databases.<br>
+                               (January 2015 – May 2015)
+                           </p>
+                       </div>
+                   </div>
+               </li>
+               {{--<li>--}}
+                   {{--<div class="timeline-panel">--}}
+                       {{--<div class="timeline-heading">--}}
+                           {{--<h4 class="timeline-title">Mussum ipsum cacilds</h4>--}}
+                       {{--</div>--}}
+                       {{--<div class="timeline-body">--}}
+                           {{--<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>--}}
+                       {{--</div>--}}
+                   {{--</div>--}}
+               {{--</li>--}}
+               {{--<li class="timeline-inverted">--}}
+                   {{--<div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>--}}
+                   {{--<div class="timeline-panel">--}}
+                       {{--<div class="timeline-heading">--}}
+                           {{--<h4 class="timeline-title">Mussum ipsum cacilds</h4>--}}
+                       {{--</div>--}}
+                       {{--<div class="timeline-body">--}}
+                           {{--<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>--}}
+                       {{--</div>--}}
+                   {{--</div>--}}
+               {{--</li>--}}
            </ul>
        </div>
 
+       <div id="skills">
+           <div class="site-title text-center ">
+               <h3> Skills </h3>
+           </div>
 
-
-
+           <table border=0 class="rectangle-list" style="text-align: center;  margin-left:auto; margin-right:auto;">
+               <tr>
+                   <td>
+                       <ol>
+                           <li><p>Knowledge of PHP, CSS, XHTML and JavaScript</p></li>
+                           <li><p>Knowledge of Laravel, CodeIgniter frameworks</p></li>
+                           <li><p>Experience with design patterns</p></li>
+                           <li><p>Knowledge of SQL</p></li>
+                           <li><p>Experience with Node.js, AngularJS, LESS, Git and Grunt technologies.</p></li>
+                           <li><p>Integrating new technologies into web properties</p></li>
+                           <li><p>Knowledge of languages: Armenian fluent, Russian fluent, English Fluent (Toefl IBT, GRE)</p></li>
+                       </ol>
+                   </td>
+               </tr>
+           </table>
+       </div>
 
    </div>
 
@@ -298,26 +272,23 @@
    </div>
 
    <br/>
-   @if (count($errors) > 0)
-       <div class="alert alert-danger">
-           <ul>
-               @foreach ($errors->all() as $error)
-                   <li>{{ $error }}</li>
-               @endforeach
-           </ul>
-       </div>
-   @endif
+   {{--@if (count($errors) > 0)--}}
+       {{--<div class="alert alert-danger">--}}
+           {{--<ul>--}}
+               {{--@foreach ($errors->all() as $error)--}}
+                   {{--<li>{{ $error }}</li>--}}
+               {{--@endforeach--}}
+           {{--</ul>--}}
+       {{--</div>--}}
+   {{--@endif--}}
 
-
-   @if(session('status'))
-       <div class="alert alert-success">
-           {{ session('status') }}
-       </div>
-   @endif
    <br/>
 
-   <h2 style="text-align: center">Portfolio</h2>
-   <ul class="nav nav-tabs">
+   <div class="site-title text-center ">
+       <h3>Portfolio </h3>
+   </div>
+
+   <ul class="nav nav-tabs" style=" display: flex;justify-content: center;">
        <li class="active"><a data-toggle="tab" href="#portfolio">Android Applications</a></li>
        <li><a data-toggle="tab" href="#menu1">Web Applications</a></li>
    </ul>
@@ -370,30 +341,42 @@
        </div>
    </div>
 
+   @if(session('status'))
+       <div class="alert alert-success">
+           {{ session('status') }}
+       </div>
+   @endif
+
+
    <div id="contactUs" style="padding-top: 8%;">
 
        <div class="container">
            <div class="row text-center">
-               <h2 class="text-uppercase">Contact us</h2>
+               <div class="site-title text-center ">
+                   <h3> Contact us </h3>
+               </div>
                <br/> <br/>
                <div class="col-md-6 col-sm-6 col-xs-12">
                    <div id="map" style="width:100%;height:20em;background:yellow"></div>
                </div>
-               <div class="col-md-6 col-sm-6 col-xs-12">
-                   <form action="{{ route('about') }}" method="post">
+               <div class="col-md-6 col-sm-6 col-xs-12" >
+                   <form action= {{route('about','#contactUs')}} method="post">
                        {{csrf_field()}}
                        <div class="m-demo__preview">
-                           <div class="form-group m-form__group">
-                               <input  class="form-control m-input m-input--square"  name="name" placeholder="Username">
+                           <div class="form-group m-form__group {{ $errors->has('name') ? 'has-error' : '' }}">
+                               <input  class="form-control m-input m-input--square input-lg"  name="name" placeholder="Username">
+                               <span style="color: red;"> {!! $errors->first('name') !!} </span>
                            </div>
 
-                           <div class="form-group m-form__group">
-                               <input type="text" class="form-control m-input" placeholder="Email" name="email">
+                           <div class="form-group m-form__group {{ $errors->has('email') ? 'has-error' : '' }}">
+                               <input type="text" class="form-control m-input input-lg" placeholder="Email" name="email">
+                               <span style="color: red;"> {!! $errors->first('email') !!} </span>
                            </div>
 
-                           <div class="form-group m-form__group row">
+                           <div class="form-group m-form__group row {{ $errors->has('text') ? 'has-error' : '' }}">
                                <div class="col-lg-12">
-                                   <textarea name="text" class="form-control" data-provide="markdown" rows="10" placeholder="Text"></textarea>
+                                   <textarea name="text" class="form-control" data-provide="markdown" rows="15" placeholder="Text" id="editor"></textarea>
+                                   <span style="color: red;"> {!! $errors->first('text') !!} </span>
                                </div>
                            </div>
 
@@ -411,8 +394,10 @@
        </div>
        <br><br>
    </div>
+
+
    </body>
-   <footer>
+   <footer >
        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
        <!-- Latest compiled and minified JavaScript -->
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -420,5 +405,9 @@
        <script src="{{ asset('js/theme/home.js') }}"></script>
        <script src="https://maps.googleapis.com/maps/api/js?key={{$key}}&callback=myMap"></script>
        <script src="{{ asset('js/timeline.js') }}"></script>
+       <script src="{{asset('/js/ckeditor/ckeditor.js') }}"></script>
+       <script>
+           CKEDITOR.replace("editor")
+       </script>
    </footer>
 </html>

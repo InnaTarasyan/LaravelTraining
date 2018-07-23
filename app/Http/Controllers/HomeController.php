@@ -109,7 +109,7 @@ class HomeController extends Controller
             ], $messages);
 
             if($validator->fails()){
-                return redirect()->route('home')->withErrors($validator)->withInput();
+                return redirect(url()->previous())->withErrors($validator)->withInput();
             }
 
             $data = $request->all();
@@ -122,7 +122,7 @@ class HomeController extends Controller
 
             });
 
-        return Redirect::back();
+        return redirect(url()->previous());
 
 
     }
