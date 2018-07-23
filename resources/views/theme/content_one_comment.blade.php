@@ -10,7 +10,7 @@
                {{ $data['created_at']->format('F d, Y \a\t H:i') }}
             </div>
             <div class="comment-body">
-                <p>{{$data['text']}}</p>
+                <p> {!! $data['text'] !!}</p>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@
                 </div>
                 <br/>
                 <div class="comment-body">
-                    <p>{{$item->text}}</p>
+                    <p> {!! $item['text'] !!}</p>
                 </div>
                 <div class="reply group">
                     <a class="comment-reply-link" href="#respond" onclick="return addComment.moveForm(&quot;comment-{{$item->id}}&quot;, &quot;{{$item->id}}&quot;, &quot;respond&quot;, &quot;{{$item->application_id}}&quot;)">Reply</a>

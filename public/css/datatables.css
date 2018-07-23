@@ -1,41 +1,41 @@
 tbody tr.even:hover, #example tbody tr.even td.highlighted {
-    background-color: #ECFFB3;
+    background-color: #EAC7C0;
 }
 
 tbody tr.odd:hover, #example tbody tr.odd td.highlighted {
-    background-color: #E6FF99;
+    background-color: #EAC7C0;
 }
 
 tr.even:hover {
-    background-color: #ECFFB3;
+    background-color: #EAC7C0;
 }
 
 tr.even:hover td.sorting_1 {
-    background-color: #DDFF75;
+    background-color: #fa8072;
 }
 
 tr.even:hover td.sorting_2 {
-    background-color: #E7FF9E;
+    background-color: #EAC7C0;
 }
 
 tr.even:hover td.sorting_3 {
-    background-color: #E2FF89;
+    background-color: #EAC7C0;
 }
 
 tr.odd:hover {
-    background-color: #E6FF99;
+    background-color: #EAC7C0;
 }
 
 tr.odd:hover td.sorting_1 {
-    background-color: #D6FF5C;
+    background-color: #fa8072;
 }
 
 tr.odd:hover td.sorting_2 {
-    background-color: #E0FF84;
+    background-color: #EAC7C0;
 }
 
 tr.odd:hover td.sorting_3 {
-    background-color: #DBFF70;
+    background-color: #EAC7C0;
 }
 .danger{
     color:red;

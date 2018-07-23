@@ -16,6 +16,10 @@ jQuery(document).ready(function($) {
         fadeIn(500,function() {
 
             var data = $('#commentform').serializeArray();
+            if(CKEDITOR.instances.comment){
+                data[0]['value'] = CKEDITOR.instances.comment.getData();
+            }
+
 
             $.ajax({
 

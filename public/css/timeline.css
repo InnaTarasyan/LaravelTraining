@@ -15,6 +15,11 @@
     margin-left: -1.5px;
 }
 
+.timeline-panel:hover{
+    background-color: #EAC7C0;
+}
+
+
 .timeline > li {
     margin-bottom: 20px;
     position: relative;
@@ -180,4 +185,6 @@
         left: -14px;
         right: auto;
     }
+
+
 }
