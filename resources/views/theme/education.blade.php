@@ -43,7 +43,7 @@
                         <p>Control and Informatics in Technical Systems.
                             Department of Cybernetics.
                             Bachelor degree.<br/>
-                            (2006– 2010)
+                            (2006 – 2010)
                         </p>
                     </div>
                 </div>
@@ -66,10 +66,10 @@
                 <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">Iguana system. Yerevan.</h4>
+                        <h4 class="timeline-title">Iguan Systems. Armenia, Yerevan.</h4>
                     </div>
                     <div class="timeline-body">
-                        <p>Web Developer. Implemented inner system enhancement and bugs correction, improvements on design and functionality, worked with databases<br>
+                        <p>Web Developer. Maintaining performance of existing client websites. Constructed web sites using Laravel framework<br>
                             (December 2017 – May 2018)</p>
                     </div>
                 </div>
@@ -78,10 +78,10 @@
                 <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">Helix Consulting LLC. Yerevan.</h4>
+                        <h4 class="timeline-title">Helix Consulting LLC. Armenia, Yerevan.</h4>
                     </div>
                     <div class="timeline-body">
-                        <p>Web Developer.Maintaining performance of existing client websites.<br>
+                        <p>Web Developer. Maintaining performance of existing client websites. Constructed web sites using Laravel framework. <br>
                             (September 2017 – December 2017)
                         </p>
                     </div>
@@ -91,13 +91,13 @@
                 <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">SoftCode LLC. Yerevan</h4>
+                        <h4 class="timeline-title">SoftCode LLC. Armenia, Armenia, Yerevan</h4>
                     </div>
                     <div class="timeline-body">
                         <p>Web Developer.
                             Maintaining performance of existing client websites.
                             Suggesting improvements on design and functionality. <br>
-                            (February 2016 – July 2017)
+                            (January 2016 – July 2017)
                         </p>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                 <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">Rosgosstrakh Armenia Insurance CJSC. Yerevan</h4>
+                        <h4 class="timeline-title">Rosgosstrakh Armenia Insurance CJSC. Armenia, Yerevan</h4>
                     </div>
                     <div class="timeline-body">
                         <p>Web Developer. Implemented inner system enhancement and bugs correction, improvements on design and functionality, worked with databases.<br>
@@ -123,21 +123,23 @@
             <h3> Skills </h3>
         </div>
 
-        <table border=0 class="rectangle-list" style="text-align: center;  margin-left:auto; margin-right:auto;">
-            <tr>
-                <td>
-                    <ol>
-                        <li><p>Knowledge of PHP, CSS, XHTML and JavaScript</p></li>
-                        <li><p>Knowledge of Laravel, CodeIgniter frameworks</p></li>
-                        <li><p>Experience with design patterns</p></li>
-                        <li><p>Knowledge of SQL</p></li>
-                        <li><p>Experience with Node.js, AngularJS, LESS, Git and Grunt technologies.</p></li>
-                        <li><p>Integrating new technologies into web properties</p></li>
-                        <li><p>Knowledge of languages: Armenian fluent, Russian fluent, English Fluent (Toefl IBT, GRE)</p></li>
-                    </ol>
-                </td>
-            </tr>
-        </table>
+        <div class="container">
+            <table border=0 class="rectangle-list" style="text-align: center;  margin-left:auto; margin-right:auto;">
+                <tr>
+                    <td>
+                        <ol>
+                            <li><p>Knowledge of PHP, CSS, XHTML and JavaScript</p></li>
+                            <li><p>Knowledge of Laravel, CodeIgniter frameworks</p></li>
+                            <li><p>Experience with design patterns</p></li>
+                            <li><p>Knowledge of SQL</p></li>
+                            <li><p>Experience with Node.js, AngularJS, LESS, Git and Grunt technologies.</p></li>
+                            <li><p>Integrating new technologies into web properties</p></li>
+                            <li><p>Knowledge of languages: Armenian fluent, Russian fluent, English Fluent (Toefl IBT, GRE)</p></li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 
 </div>

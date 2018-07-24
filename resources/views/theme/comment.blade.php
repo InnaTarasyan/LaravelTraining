@@ -1,19 +1,22 @@
 @foreach($items as $item)
-    <li id="li-comment-{{ $item->id }}" class="comment even {{ ($item->user_id == $application->user_id) ?  'bypostauthor odd' : ''}}">
-        <div id="comment-{{ $item->id }}" class="comment-container">
-            <div class="comment-author vcard">
+    <li id="li-comment-{{ $item->id }}" class="comment even {{ ($item->user_id == $application->user_id) ?  'bypostauthor odd' : ''}}" >
+        <div id="comment-{{ $item->id }}" class="comment-container" >
+            <div class="comment-author vcard" >
                  @set($hash, isset($item->email) ? md5($item->email) : md5($item->user->email))
                 <img alt="" src="https://www.gravatar.com/avatar/{{$hash}}?d=mm&s=55" class="avatar" height="55" width="50" />
+                <br/>
                 <cite class="fn">{{$item->user->name or $item->name}}</cite>
                 {!! $item->user && $item->user->hasRole('Admin') ? '<p style="color:red">Administrator</p>': '' !!}
             </div>
             <!-- .comment-author .vcard -->
-            <div class="comment-meta commentmetadata">
+            <div class="comment-meta commentmetadata" style="background-color: #f4f4f4; ">
                 <div class="intro">
                     <div class="commentDate">
                         <a href="#comment-2">
                             {{ is_object($item->created_at) ? $item->created_at->format('F d, Y \a\t H:i') : ''}}</a>
+                        <br/>
                     </div>
+                    <br/>
                     <div class="commentNumber">#&nbsp;</div>
                 </div>
                 <br/>
