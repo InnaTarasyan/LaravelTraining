@@ -17,7 +17,11 @@ jQuery(document).ready(function($) {
 
             var data = $('#commentform').serializeArray();
             if(CKEDITOR.instances.comment){
-                data[0]['value'] = CKEDITOR.instances.comment.getData();
+                if(data.length > 4){
+                    data[3]['value'] = CKEDITOR.instances.comment.getData();
+                } else {
+                    data[0]['value'] = CKEDITOR.instances.comment.getData();
+                }
             }
 
 
