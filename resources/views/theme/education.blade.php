@@ -43,7 +43,6 @@
                         <p>Control and Informatics in Technical Systems.
                             Department of Cybernetics.
                             Bachelor degree.<br/>
-                            (2006 – 2010)
                         </p>
                     </div>
                 </div>
