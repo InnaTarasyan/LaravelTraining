@@ -114,13 +114,13 @@ class HomeController extends Controller
 
             $data = $request->all();
 
-            $result = Mail::send('theme.email', ['data' => $data], function ($message) use ($data){
-                $mail_admin = env('mail_admin');
-                $message->from($data['email'], $data['name']);
-                $message->to($mail_admin)->subject('Feedback');
-                Session::flash('status', 'Email is sent!');
 
-            });
+        $result = Mail::send('theme.email', ['data' => $data], function ($message) use ($data){
+            $mail_admin = env('MAIL_ADMIN');
+            $message->from($data['email'], $data['name']);
+            $message->to($mail_admin)->subject('Feedback');
+            Session::flash('status', 'Email sent successfully!');
+        });
 
         return redirect(url()->previous());
 
