@@ -1,8 +1,8 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
     line-height: 1.8;
     color: #222;
@@ -11,7 +11,7 @@ body {
 
 /* Section */
 .about-section {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 4rem 2rem;
@@ -24,13 +24,16 @@ body {
 
 /* Title */
 .site-title h2 {
-    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-style: italic;
     color: #0aa1d6;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.5px;
 }
 .site-title .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    font-style: italic;
     color: #555;
     margin-top: 0.5rem;
 }
@@ -38,8 +41,9 @@ body {
 /* Text */
 .about-inner-column .intro,
 .about-inner-column .closing {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.35rem;
+    font-weight: 500;
+    font-style: italic;
     margin-bottom: 1.4rem;
     color: #111;
 }
@@ -56,6 +60,7 @@ body {
     padding: 0.25em 0.5em;
     border-radius: 8px;
     font-weight: 600;
+    font-style: italic;
     color: #0a58ca;
 }
 
@@ -73,7 +78,9 @@ body {
     transform: scale(1.02);
 }
 .features-box h3 {
-    font-size: 1.3rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     color: #0aa1d6;
     font-weight: 600;
@@ -87,6 +94,7 @@ body {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
+    font-style: italic;
 }
 
 /* Image */
@@ -118,6 +126,7 @@ body {
     text-decoration: none;
     transition: all 0.3s ease;
     color: #fff;
+    font-style: italic;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .link-button.primary { background: linear-gradient(135deg, #007bff, #00b4d8); }
