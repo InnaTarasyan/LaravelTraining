@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/timeline.css')}}">
     <link rel="stylesheet" href="{{asset('css/about_us.css')}}">
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/education.css')}}">
 @endsection
 @section('content')
    @include('theme.menu')
