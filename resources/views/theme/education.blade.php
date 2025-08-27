@@ -1,7 +1,7 @@
-<div id="education">
+<div id="education" aria-labelledby="education-heading">
     <div class="container">
         <div class="site-title text-center ">
-            <h3>Education and Experience</h3>
+            <h3 id="education-heading">Education and Experience</h3>
         </div>
         <ul class="timeline">
             <li>
@@ -117,27 +117,37 @@
         </ul>
     </div>
 
-    <div id="skills">
+    <div id="skills" aria-labelledby="skills-heading">
         <div class="site-title text-center ">
-            <h3> Skills </h3>
+            <h3 id="skills-heading">Skills</h3>
         </div>
 
         <div class="container">
-            <table border=0 class="rectangle-list" style="text-align: center;  margin-left:auto; margin-right:auto;">
-                <tr>
-                    <td>
-                        <ol>
-                            <li><p>Knowledge of PHP, CSS, XHTML and JavaScript</p></li>
-                            <li><p>Knowledge of Laravel, CodeIgniter frameworks</p></li>
-                            <li><p>Experience with design patterns</p></li>
-                            <li><p>Knowledge of SQL</p></li>
-                            <li><p>Experience with Node.js, AngularJS, LESS, Git and Grunt technologies.</p></li>
-                            <li><p>Integrating new technologies into web properties</p></li>
-                            <li><p>Knowledge of languages: Armenian fluent, Russian fluent, English Fluent (Toefl IBT, GRE)</p></li>
-                        </ol>
-                    </td>
-                </tr>
-            </table>
+            <div class="row" role="list">
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">PHP</span> <span class="skill-level text-muted">Advanced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">Laravel</span> <span class="skill-level text-muted">Advanced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">JavaScript</span> <span class="skill-level text-muted">Intermediate</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">HTML/CSS</span> <span class="skill-level text-muted">Advanced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">SQL</span> <span class="skill-level text-muted">Advanced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">Git</span> <span class="skill-level text-muted">Advanced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">Node.js</span> <span class="skill-level text-muted">Intermediate</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">AngularJS</span> <span class="skill-level text-muted">Intermediate</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">LESS/Sass</span> <span class="skill-level text-muted">Intermediate</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">Design patterns</span> <span class="skill-level text-muted">Working knowledge</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">English/Russian/Armenian</span> <span class="skill-level text-muted">Fluent</span></div>
+
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">Laravel Datatables</span> <span class="skill-level text-muted">Proficient</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">TradingView</span> <span class="skill-level text-muted">Proficient</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">Metronic (Bootstrap)</span> <span class="skill-level text-muted">Experienced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">Telegram API</span> <span class="skill-level text-muted">Experienced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">select2.js</span> <span class="skill-level text-muted">Experienced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">AJAX</span> <span class="skill-level text-muted">Advanced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">REST APIs</span> <span class="skill-level text-muted">Advanced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">Google Maps API</span> <span class="skill-level text-muted">Experienced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">CryptoCompare API</span> <span class="skill-level text-muted">Experienced</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">Docker</span> <span class="skill-level text-muted">Working knowledge</span></div>
+                <div class="col-sm-6 col-md-4 mb-24 skill-item" role="listitem"><span class="skill-chip">CI/CD</span> <span class="skill-level text-muted">Working knowledge</span></div>
+            </div>
         </div>
     </div>
 

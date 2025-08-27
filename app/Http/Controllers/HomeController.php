@@ -12,6 +12,7 @@ use Mail;
 use Config;
 use Session;
 use Redirect;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class HomeController extends Controller
 {
@@ -81,7 +82,7 @@ class HomeController extends Controller
                 return '<a href="'. route('show', ['id' => $item->id]) .'">'. $item->name .'</a>';
             })
             ->editColumn('img', function ($item){
-                return '<img class="myImg" src="images/apps/'.$item->img.'" alt="'.$item->name.'" style="width:100%;max-width:300px">';
+                return '<img class="myImg app-thumb" src="images/apps/'.$item->img.'" alt="'.e($item->name).'" title="'.e($item->name).'" loading="lazy" decoding="async" width="200" height="100">';
             })
             ->editColumn('desc', function ($item){
                 return substr($item->desc, 0, 60)."..";
@@ -125,5 +126,15 @@ class HomeController extends Controller
         return redirect(url()->previous());
 
 
+    }
+
+
+    public function downloadPage()
+    {
+        // Load the Blade view you want as PDF
+        $pdf = Pdf::loadView('theme/cv'); // e.g. resources/views/about.blade.php
+
+        // Return PDF download
+        return $pdf->download('cv.pdf');
     }
 }

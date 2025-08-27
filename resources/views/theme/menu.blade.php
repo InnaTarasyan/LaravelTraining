@@ -12,7 +12,7 @@
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            @if($menu)
+            @if(isset($menu))
                 {!! $menu !!}
             @endif
         </div><!--/.nav-collapse -->

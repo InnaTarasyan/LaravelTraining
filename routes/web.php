@@ -33,3 +33,5 @@ Route::get('/get_android_apps/{type}', ['as' => 'datatable.get_android_apps','us
 Route::get('/get_web_apps/{type}', ['as' => 'datatable.get_web_apps','uses' => 'HomeController@getAndroidApps']);
 
 Route::post('/about', ['uses' => 'HomeController@about', 'as' => 'about']);
+
+Route::get('/download-page', [\App\Http\Controllers\HomeController::class, 'downloadPage'])->name('download.page');

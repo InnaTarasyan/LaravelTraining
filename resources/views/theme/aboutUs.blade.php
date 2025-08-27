@@ -1,31 +1,27 @@
-<div id="aboutUs">
-    <div class="about-section">
+<div id="aboutUs" aria-labelledby="about-heading">
+    <section class="about-section">
         <div class="container">
             <div class="site-title text-center">
-                <h3>About Us</h3>
+                <h3 id="about-heading">About Me</h3>
             </div>
-            <div class="about-inner-section">
-                <div class="col-md-6 about-inner-column" >
-                    <p align="left">
-                        <div style="text-indent: 50px;">
-                            Hi :) Let me introduce myself. I am Inna Tarasyan, I am web developer. My passion is designing and constructing beautiful, simple in use web applications. <br/>
-                            You can see the list of my Web Sites here, on the Portfolio page. <br/>
-                            I was also working on Android apps implementations, so please feel free and take a look on my projects also here, on the Portfolio page.
-                            I have written those Android apps while I was a student, so , please, don't be strict :) More than 2500 times those applications were installed from Amazon.
-                            Unfortunately, for downloading most applications you will have to pay. In order to download them free of charge, please, write me.
-                            Web Applications are written for the purpose of working out some web technologies, and also because I LOVE that so much :)
-                            I'll be grateful for all your remarks and notes regarding my works.  Please write :) <br/>
-                        </div>
-                        <div style="text-indent: 50px;">
-                            I am available for remote work, as a Web Developer - if you would like to build something together, get in touch.
-                        </div>
-                    </p>
+            <div class="row about-inner-section align-items-center">
+                <div class="col-md-6 col-sm-12 about-inner-column">
+                    <p class="lead">Hi, I’m <strong>Inna Tarasyan</strong> — a web developer who enjoys designing and building clean, user-friendly web applications.</p>
+                    <p>You can explore selected work in the Portfolio section below. I’ve also created several Android apps back in my student years, which have been downloaded over <strong>2,500 times</strong> on Amazon.</p>
+                    <p>I love learning new technologies and turning ideas into reliable products. I’m open to remote opportunities — feel free to reach out if you’d like to build something together.</p>
+
+                    <!-- Action Links -->
+                    <div class="about-links">
+                        <a href="mailto:innatarasyancryptotrading@gmail.com" class="link-button primary">📧 Email Me</a>
+                        <a href="{{ route('download.page') }}" class="link-button secondary">📄 Download CV</a>
+                        <a href="https://github.com/InnaTarasyan" target="_blank" class="link-button github">💻 GitHub</a>
+                        <a href="https://www.linkedin.com/in/innatarasyan" target="_blank" class="link-button linkedin">🔗 LinkedIn</a>
+                    </div>
                 </div>
-                <div class="col-md-6 about-right">
-                    <img src="https://images.pexels.com/photos/7096/people-woman-coffee-meeting.jpg?w=940&h=650&auto=compress&cs=tinysrgb" alt=" ">
+                <div class="col-md-6 col-sm-12 about-right text-center">
+                    <img class="about-image" src="https://i.ytimg.com/vi/hHHu7wxD8yM/maxresdefault.jpg" alt="Developer working on a laptop">
                 </div>
-                <div class="clearfix"> </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>

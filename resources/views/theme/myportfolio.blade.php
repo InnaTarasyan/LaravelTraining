@@ -2,7 +2,7 @@
     <h3>Portfolio </h3>
 </div>
 
-<ul class="nav nav-tabs" style=" display: flex;justify-content: center;">
+<ul class="nav nav-tabs" style=" display: flex;justify-content: center;flex-wrap: wrap;">
     <li class="active"><a data-toggle="tab" href="#portfolio">Android Applications</a></li>
     <li><a data-toggle="tab" href="#menu1">Web Applications</a></li>
 </ul>
