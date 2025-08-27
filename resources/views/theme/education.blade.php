@@ -1,8 +1,9 @@
 <div id="education" aria-labelledby="education-heading">
     <div class="container">
-        <div class="site-title text-center ">
-            <h3 id="education-heading">Education and Experience</h3>
+        <div class="site-title text-center">
+            <h2 id="education-heading" class="fw-bold">🎓💼 Education & Experience</h2>
         </div>
+
         <ul class="timeline">
             <li>
                 <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>

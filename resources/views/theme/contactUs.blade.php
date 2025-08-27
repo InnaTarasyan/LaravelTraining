@@ -2,9 +2,10 @@
 
     <div class="container">
         <div class="row text-center">
-            <div class="site-title text-center ">
-                <h3 id="contact-heading">Contact</h3>
+            <div class="site-title text-center">
+                <h2 id="contact-heading" class="fw-bold">📬 Contact</h2>
             </div>
+
             <br/> <br/>
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <div id="map" role="img" aria-label="Location map" style="width:100%;height:20em;background:yellow"></div>

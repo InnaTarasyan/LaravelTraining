@@ -1,6 +1,7 @@
-<div class="site-title text-center ">
-    <h3>Portfolio </h3>
+<div class="site-title text-center">
+    <h2 id="portfolio-heading" class="fw-bold">📂 Portfolio</h2>
 </div>
+<br/><br/>
 
 <ul class="nav nav-tabs" style=" display: flex;justify-content: center;flex-wrap: wrap;">
     <li class="active"><a data-toggle="tab" href="#portfolio">Android Applications</a></li>
@@ -9,10 +10,10 @@
 
 <div class="tab-content">
     <div id="portfolio" class="tab-pane fade in active">
-        <h3 style="text-align: center">Android Applications</h3>
+        <h2 id="apps-heading" class="fw-bold text-center">📱 Android Apps Table</h2>
         <p>
         <div class="container">
-            <h2>Android Apps Table</h2>
+
             <input type="hidden" id="apps_route" value="{{ route('datatable.get_android_apps', ['type' => 'apps']) }}">
             <br/>
             <div class="table-responsive">
@@ -32,10 +33,9 @@
         </p>
     </div>
     <div id="menu1" class="tab-pane fade">
-        <h3 style="text-align: center"> Web Applications</h3>
+        <h2 id="webapps-heading" class="fw-bold text-center">🌐 Web Applications</h2>
         <p>
         <div class="container">
-            <h2>Web Apps Table</h2>
             <input type="hidden" id="web_route" value="{{ route('datatable.get_web_apps', ['type' => 'web']) }}">
             <br/>
             <div class="table-responsive">
