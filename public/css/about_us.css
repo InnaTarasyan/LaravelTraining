@@ -1,202 +1,72 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap');
 
+/*!* Base body *!*/
 body {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
-    color: #222;
+    font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+    font-size: 1.2rem;   /* matches your timeline body size */
+    line-height: 1.8;    /* relaxed, easy-to-read spacing */
+    color: #333;         /* softer dark gray for readability */
     background: #f9fafc;
 }
 
 /* Section Wrapper */
 .section {
     background: #fff;
-    border-radius: 14px;
-    padding: 3rem 2rem;
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
     margin-bottom: 2.5rem;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .section:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 /* Titles */
 .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    font-style: italic;
-    color: #007bff;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 2rem; /* similar to timeline titles */
     margin-bottom: 1rem;
+    color: #111;
+    letter-spacing: 0.3px;
 }
 .section-subtitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #555;
     margin-bottom: 2rem;
+    font-weight: 500;
 }
 
 /* Text */
 .section p {
-    font-size: 1.05rem;
-    color: #444;
-    margin-bottom: 1.2rem;
+    font-size: 1.2rem;   /* match timeline body */
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.4rem;
 }
 
-/* Features / Timeline Panels */
+/* Card Panels */
 .card {
     background: #fff;
-    border-radius: 12px;
-    padding: 1.4rem 1.6rem;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
+    border-radius: 14px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 1.6rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    background: #f9fbff;
 }
 .card h3 {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.3rem;
-    color: #007bff;
-    margin-bottom: 0.6rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 0.8rem;
 }
-
-/*!* Skills *!*/
-/*.skills-grid {*/
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-    /*gap: 10px;*/
-    /*justify-content: center;*/
-/*}*/
-/*.skill-chip {*/
-    /*background: #f5f5f5;*/
-    /*border-radius: 20px;*/
-    /*padding: 8px 14px;*/
-    /*font-size: 0.9rem;*/
-    /*font-weight: 500;*/
-    /*color: #333;*/
-    /*box-shadow: 0 2px 5px rgba(0,0,0,0.08);*/
-    /*transition: all 0.3s ease;*/
-/*}*/
-/*.skill-chip small {*/
-    /*display: block;*/
-    /*font-size: 1.2rem;*/
-    /*color: #777;*/
-/*}*/
-/*.skill-chip:hover {*/
-    /*background: #007bff;*/
-    /*color: #fff;*/
-/*}*/
-/*.skill-chip:hover small {*/
-    /*color: #eaf1ff;*/
-/*}*/
-
-/* Links (unified buttons) */
-.link-button {
-    display: inline-block;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    color: #fff;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-}
-.link-button.primary { background: linear-gradient(135deg, #007bff, #00b4d8); }
-.link-button.secondary { background: linear-gradient(135deg, #6c757d, #495057); }
-.link-button.github { background: linear-gradient(135deg, #24292e, #000); }
-.link-button.linkedin { background: linear-gradient(135deg, #0077b5, #005582); }
-.link-button:hover {
-    opacity: 0.95;
-    transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    body { font-size: 16px; }
-    .section { padding: 2rem 1.2rem; }
-    .section-title { font-size: 1.8rem; }
-    .section-subtitle { font-size: 0.95rem; }
-    .card { padding: 1rem 1.2rem; }
-    .skills-grid { gap: 8px; }
-    .skill-chip { font-size: 0.85rem; padding: 6px 12px; }
-}
-
-
-/*.skills-grid {*/
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-    /*gap: 14px;*/
-    /*justify-content: center;*/
-/*}*/
-
-/*!* Skill chip base *!*/
-/*.skill-chip {*/
-    /*background: linear-gradient(135deg, #f9f9f9, #f1f1f1);*/
-    /*border-radius: 24px;*/
-    /*padding: 10px 18px;*/
-    /*font-size: 1rem;*/
-    /*font-weight: 600;*/
-    /*color: #333;*/
-    /*box-shadow: 0 4px 8px rgba(0,0,0,0.06);*/
-    /*transition: all 0.3s ease;*/
-    /*display: inline-flex;*/
-    /*align-items: center;*/
-    /*gap: 8px;*/
-    /*cursor: default;*/
-/*}*/
-
-/*!* Skill level badge *!*/
-/*.skill-chip small {*/
-    /*background: #e9ecef;*/
-    /*font-size: 0.75rem;*/
-    /*font-weight: 600;*/
-    /*color: #555;*/
-    /*padding: 3px 8px;*/
-    /*border-radius: 12px;*/
-    /*text-transform: uppercase;*/
-    /*letter-spacing: 0.5px;*/
-/*}*/
-
-/*!* Hover effect *!*/
-/*.skill-chip:hover {*/
-    /*transform: translateY(-3px) scale(1.03);*/
-    /*box-shadow: 0 6px 14px rgba(0,0,0,0.12);*/
-    /*background: linear-gradient(135deg, #ffffff, #f3f9ff);*/
-/*}*/
-/*.skill-chip:hover small {*/
-    /*background: #007bff;*/
-    /*color: #fff;*/
-/*}*/
-
-/*!* Color coding by level *!*/
-/*.skill-chip small:contains("Advanced") {*/
-    /*background: #007bff1a;*/
-    /*color: #007bff;*/
-/*}*/
-/*.skill-chip small:contains("Intermediate") {*/
-    /*background: #ffc1071a;*/
-    /*color: #d39e00;*/
-/*}*/
-/*.skill-chip small:contains("Proficient"),*/
-/*.skill-chip small:contains("Experienced") {*/
-    /*background: #28a7451a;*/
-    /*color: #218838;*/
-/*}*/
-/*.skill-chip small:contains("Working") {*/
-    /*background: #6f42c11a;*/
-    /*color: #6f42c1;*/
-/*}*/
-/*.skill-chip small:contains("Fluent") {*/
-    /*background: #17a2b81a;*/
-    /*color: #117a8b;*/
-/*}*/
-
 
 /* Skills grid */
 .skills-grid {
@@ -220,21 +90,13 @@ body {
     gap: 10px;
     transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
-
-/* Hover/active */
 .skill-chip:hover {
     transform: translateY(-3px) scale(1.03);
     box-shadow: 0 10px 18px rgba(0,0,0,0.12);
     background: linear-gradient(135deg, #ffffff, #f3f9ff);
 }
 
-/* Optional keyboard focus if you ever make chips focusable */
-.skill-chip:focus-visible {
-    outline: 2px solid #007bff;
-    outline-offset: 2px;
-}
-
-/* Level badge (the <small>) */
+/* Skill level badge */
 .skill-chip small {
     display: inline-block;
     padding: 3px 8px;
@@ -246,7 +108,7 @@ body {
     line-height: 1;
 }
 
-/* Color coding by level */
+/* Level colors */
 .level-advanced {
     background: rgba(0, 123, 255, 0.12);
     color: #0a58ca;
@@ -269,9 +131,34 @@ body {
     color: #117a8b;
 }
 
-/* Responsive tweaks */
+/* Unified Links / Buttons */
+.link-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+.link-button.primary { background: linear-gradient(135deg, #007bff, #00b4d8); }
+.link-button.secondary { background: linear-gradient(135deg, #6c757d, #495057); }
+.link-button.github { background: linear-gradient(135deg, #24292e, #000); }
+.link-button.linkedin { background: linear-gradient(135deg, #0077b5, #005582); }
+.link-button:hover {
+    opacity: 0.95;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .skills-grid { gap: 10px; }
+    body { font-size: 16px; }
+    .section { padding: 2rem 1.4rem; }
+    .section-title { font-size: 1.7rem; }
+    .section-subtitle { font-size: 1rem; }
+    .card { padding: 1.2rem 1.4rem; }
     .skill-chip { padding: 8px 14px; font-size: 0.95rem; }
     .skill-chip small { font-size: 0.7rem; }
 }
