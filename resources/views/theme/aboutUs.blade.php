@@ -1,48 +1,57 @@
 <div id="aboutUs" aria-labelledby="about-heading">
     <section class="about-section py-5">
         <div class="container">
-            <div class="site-title text-center mb-4">
-                <h3 id="about-heading" class="fw-bold">About Me</h3>
+            <div class="site-title text-center mb-5">
+                <h3 id="about-heading" class="fw-bold">👩‍💻 About Me</h3>
             </div>
 
             <div class="row about-inner-section align-items-center">
                 <!-- Left Column: Text -->
                 <div class="col-md-6 col-sm-12 about-inner-column mb-4 mb-md-0">
 
-                    <p class="lead">
-                        Hi, I’m <strong>Inna Tarasyan</strong> — a passionate <strong>web developer from Armenia</strong>
-                        dedicated to creating <em>clean, user-friendly applications</em> that make complex things simple.
+                    <p class="intro">
+                        Hi, I’m <strong>Inna Tarasyan</strong> — a passionate
+                        <span class="highlight">web developer from Armenia</span>
+                        dedicated to building <em>clean, user-friendly applications</em>
+                        that make complex things simple.
                     </p>
 
                     <p>
-                        I specialize in building projects that combine <strong>real-time data</strong>,
-                        <strong>intuitive design</strong>, and <strong>practical functionality</strong>.
-                        One of my recent projects, the <strong>Coin Trading Platform</strong>, integrates
-                        crypto data from trusted sources, offering traders reliable, up-to-date insights.
+                        I specialize in creating solutions that combine
+                        <strong>real-time data</strong>, <strong>intuitive design</strong>,
+                        and <strong>practical functionality</strong>.
+                        One of my latest projects, the
+                        <span class="highlight">Coin Trading Platform</span>, integrates
+                        trusted crypto data, offering traders reliable,
+                        up-to-date insights.
                     </p>
+
+                    <!-- Features card -->
+                    <div class="features-box">
+                        <h5>📌 Main Features</h5>
+                        <ul>
+                            <li>⚡ Real-time crypto tracking</li>
+                            <li>📊 Interactive TradingView charts</li>
+                            <li>📰 Events calendar & news</li>
+                            <li>🤖 Smart price predictions</li>
+                        </ul>
+                    </div>
 
                     <p>
-                        📌 <strong>Main Features:</strong><br>
-                        – Real-time crypto tracking<br>
-                        – Interactive TradingView charts<br>
-                        – Events calendar & news<br>
-                        – Smart price predictions
+                        Back in my student years, I created a collection of
+                        <strong>educational Android apps</strong>, downloaded over
+                        <span class="highlight">2,500 times</span> on Amazon —
+                        including GRE prep, English grammar tools, and fun
+                        geography games like <em>Guess the Flag</em>.
                     </p>
 
-                    <p>
-                        Back in my student years, I also created a collection of
-                        <strong>educational Android apps</strong>, downloaded more than
-                        <strong>2,500 times</strong> on Amazon — including GRE prep, English grammar tools,
-                        and fun geography games like <em>Guess the Flag</em>.
-                    </p>
-
-                    <p class="fw-bold mb-3">
+                    <p class="closing">
                         🚀 Always open to <strong>remote opportunities</strong>.
-                        Let’s build something great together!
+                        <span class="highlight">Let’s build something great together!</span>
                     </p>
 
                     <!-- Action Links -->
-                    <div class="about-links d-flex flex-wrap gap-2">
+                    <div class="about-links">
                         <a href="mailto:innatarasyancryptotrading@gmail.com" class="link-button primary">📧 Email</a>
                         <a href="{{ route('download.page') }}" class="link-button secondary">📄 CV</a>
                         <a href="https://github.com/InnaTarasyan" target="_blank" class="link-button github">💻 GitHub</a>
@@ -52,7 +61,7 @@
 
                 <!-- Right Column: Image -->
                 <div class="col-md-6 col-sm-12 about-right text-center">
-                    <img class="about-image img-fluid rounded shadow-lg"
+                    <img class="about-image img-fluid"
                          src="https://i.ytimg.com/vi/hHHu7wxD8yM/maxresdefault.jpg"
                          alt="Developer workspace illustration">
                 </div>
