@@ -1,35 +1,45 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #222;
+    background-color: #f5f7fa;
+}
+
 /* Section */
 .about-section {
     background: #f9fafc;
-    border-radius: 14px;
-    padding: 3rem 2rem;
+    border-radius: 16px;
+    padding: 4rem 2rem;
 }
 
 /* Title */
-.site-title h3 {
-    font-size: 2.6rem;
+.site-title h2 {
+    font-size: 2.8rem;
     color: #14B9D5;
-    font-family: 'Marvel-Regular', sans-serif;
     font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
-/* Intro text bigger */
-.about-inner-column .intro {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-bottom: 1.2rem;
+/* Text */
+.about-inner-column .intro,
+.about-inner-column .closing {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.4rem;
     color: #111;
 }
 
-/* Normal paragraph */
 .about-inner-column p {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: #444;
-    line-height: 1.75;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
-/* Highlights */
+/* Highlight */
 .highlight {
     background: #eaf6ff;
     padding: 0.2em 0.4em;
@@ -41,37 +51,27 @@
 /* Features Box */
 .features-box {
     background: #fff;
-    padding: 1.2rem 1.5rem;
-    border-radius: 10px;
-    border-left: 4px solid #14B9D5;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-    margin: 1.5rem 0;
+    padding: 1.4rem 1.6rem;
+    border-radius: 12px;
+    border-left: 5px solid #14B9D5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 1.8rem 0;
 }
-.features-box h5 {
-    font-size: 1.15rem;
-    margin-bottom: 0.8rem;
+.features-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
     color: #14B9D5;
     font-weight: 600;
 }
 .features-box ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 .features-box ul li {
-    margin-bottom: 0.5rem;
-    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
-    gap: 6px;
-}
-
-/* Closing */
-.about-inner-column .closing {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #111;
-    margin-top: 1.5rem;
 }
 
 /* Image */
@@ -93,12 +93,12 @@
 }
 .link-button {
     flex: 1 1 auto;
-    min-width: 120px;
-    padding: 12px 18px;
+    min-width: 130px;
+    padding: 14px 20px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-decoration: none;
     transition: all 0.3s ease;
     color: #fff;
@@ -107,104 +107,19 @@
 .link-button.secondary { background: #6c757d; }
 .link-button.github { background: #24292e; }
 .link-button.linkedin { background: #0077b5; }
-.link-button:hover { opacity: 0.9; transform: translateY(-2px); }
-
-/* Mobile */
-@media (max-width: 768px) {
-    .site-title h3 { font-size: 2.2rem; }
-    .about-inner-column .intro { font-size: 1.1rem; }
-    .about-inner-column p { font-size: 0.95rem; }
-    .features-box { padding: 1rem; }
-    .about-links { flex-direction: column; }
-    .link-button { width: 100%; }
+.link-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
-
-/* Import Google Font (add this in <head>) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #222;
-    font-size: 18px;  /* increased base size */
-    line-height: 1.8;
-}
-
-/* Section */
-.about-section {
-    background: #f9fafc;
-    border-radius: 16px;
-    padding: 4rem 2rem;
-}
-
-/* Title */
-.site-title h3 {
-    font-size: 3rem;
-    color: #14B9D5;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-/* Intro & Closing */
-.about-inner-column .intro,
-.about-inner-column .closing {
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 1.9;
-    margin-bottom: 1.5rem;
-    color: #111;
-}
-
-/* Normal paragraph */
-.about-inner-column p {
-    font-size: 1.15rem;
-    font-weight: 400;
-    color: #444;
-    margin-bottom: 1.2rem;
-}
-
-/* Highlights */
-.highlight {
-    background: #eaf6ff;
-    padding: 0.2em 0.4em;
-    border-radius: 6px;
-    font-weight: 600;
-    color: #0b5ed7;
-}
-
-/* Features Box */
-.features-box {
-    background: #fff;
-    padding: 1.5rem 1.8rem;
-    border-radius: 12px;
-    border-left: 5px solid #14B9D5;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin: 2rem 0;
-}
-.features-box h5 {
-    font-size: 1.35rem;
-    margin-bottom: 1rem;
-    color: #14B9D5;
-    font-weight: 600;
-}
-.features-box ul li {
-    margin-bottom: 0.8rem;
-    font-size: 1.15rem;
-}
-
-/* Buttons */
-.link-button {
-    padding: 14px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 10px;
-}
-
-/* Mobile tweaks */
+/* Responsive */
 @media (max-width: 768px) {
     body { font-size: 16px; }
-    .site-title h3 { font-size: 2.2rem; }
+    .site-title h2 { font-size: 2.2rem; }
     .about-inner-column .intro,
-    .about-inner-column .closing { font-size: 1.2rem; }
-    .about-inner-column p { font-size: 1.1rem; }
+    .about-inner-column .closing { font-size: 1.15rem; }
+    .about-inner-column p { font-size: 1rem; }
+    .features-box { padding: 1.2rem; }
+    .about-links { flex-direction: column; }
+    .link-button { width: 100%; }
 }

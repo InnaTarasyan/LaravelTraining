@@ -1,14 +1,14 @@
 <div id="aboutUs" aria-labelledby="about-heading">
     <section class="about-section py-5">
         <div class="container">
+            <!-- Title -->
             <div class="site-title text-center mb-5">
-                <h3 id="about-heading" class="fw-bold">👩‍💻 About Me</h3>
+                <h2 id="about-heading" class="fw-bold">👩‍💻 About Me</h2>
             </div>
 
             <div class="row about-inner-section align-items-center">
                 <!-- Left Column: Text -->
-                <div class="col-md-6 col-sm-12 about-inner-column mb-4 mb-md-0">
-
+                <div class="col-md-6 col-12 about-inner-column mb-4 mb-md-0">
                     <p class="intro">
                         Hi, I’m <strong>Inna Tarasyan</strong> — a passionate
                         <span class="highlight">web developer from Armenia</span>
@@ -22,13 +22,12 @@
                         and <strong>practical functionality</strong>.
                         One of my latest projects, the
                         <span class="highlight">Coin Trading Platform</span>, integrates
-                        trusted crypto data, offering traders reliable,
-                        up-to-date insights.
+                        trusted crypto data, offering traders reliable, up-to-date insights.
                     </p>
 
-                    <!-- Features card -->
+                    <!-- Features -->
                     <div class="features-box">
-                        <h5>📌 Main Features</h5>
+                        <h3>📌 Main Features</h3>
                         <ul>
                             <li>⚡ Real-time crypto tracking</li>
                             <li>📊 Interactive TradingView charts</li>
@@ -54,16 +53,16 @@
                     <div class="about-links">
                         <a href="mailto:innatarasyancryptotrading@gmail.com" class="link-button primary">📧 Email</a>
                         <a href="{{ route('download.page') }}" class="link-button secondary">📄 CV</a>
-                        <a href="https://github.com/InnaTarasyan" target="_blank" class="link-button github">💻 GitHub</a>
-                        <a href="https://www.linkedin.com/in/innatarasyan" target="_blank" class="link-button linkedin">🔗 LinkedIn</a>
+                        <a href="https://github.com/InnaTarasyan" target="_blank" rel="noopener" class="link-button github">💻 GitHub</a>
+                        <a href="https://www.linkedin.com/in/innatarasyan" target="_blank" rel="noopener" class="link-button linkedin">🔗 LinkedIn</a>
                     </div>
                 </div>
 
                 <!-- Right Column: Image -->
-                <div class="col-md-6 col-sm-12 about-right text-center">
+                <div class="col-md-6 col-12 about-right text-center">
                     <img class="about-image img-fluid"
                          src="https://i.ytimg.com/vi/hHHu7wxD8yM/maxresdefault.jpg"
-                         alt="Developer workspace illustration">
+                         alt="Illustration of a developer workspace with laptop and code on screen">
                 </div>
             </div>
         </div>
