@@ -267,3 +267,73 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
+
+/* Smooth transitions */
+.hover-scale, .hover-underline, .hover-fade, .hover-highlight, .hover-bullet, .hover-highlight-block {
+    transition: all 0.3s ease;
+}
+
+/* Highlight spans */
+.highlight {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    padding: 0 4px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.highlight:hover {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    color: #000;
+}
+
+/* Scale effect on hover */
+.hover-scale:hover {
+    transform: scale(1.05);
+    color: #6c63ff;
+}
+
+/* Underline on hover */
+.hover-underline:hover {
+    text-decoration: underline;
+    color: #ff6584;
+}
+
+/* Fade-in effect */
+.hover-fade:hover {
+    opacity: 0.7;
+}
+
+/* Highlight block hover */
+.hover-highlight-block {
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+.hover-highlight-block:hover {
+    background: #f9f9ff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Emphasize italic text */
+.hover-highlight:hover {
+    color: #ff6584;
+    font-weight: 500;
+}
+
+/* Feature list bullet hover */
+.hover-bullet:hover {
+    transform: translateX(5px);
+    color: #6c63ff;
+}
+
+/* Buttons */
+.link-button {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.link-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+}
