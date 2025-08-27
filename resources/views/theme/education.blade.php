@@ -106,12 +106,28 @@
                 <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">Remote Laravel Developer</h4>
+                        <h4 class="timeline-title">Remote Laravel Developer in "DreamTeam"</h4>
                     </div>
                     <div class="timeline-body">
-                        <p>Maintaining performance of existing client websites,
-                            Constructed web sites using Laravel framework,
-                            Suggesting improvements on design and functionality
+                        <p>
+                            Responsible for maintaining the performance of existing client websites, developing web applications using the Laravel framework, and proposing enhancements to design and functionality. From 2018 to 2024, I was employed at DreamTeam as a backend and frontend developer, where I played a key role in the development of the project “ВсеврачиЗдесь.ru.” My contributions were instrumental in ensuring the platform’s robustness, functionality, and overall success.
+                            <br/>
+                            (September 2018 – March 2024)
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-badge"><i class="glyphicon glyphicon-credit-card"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Remote Laravel Developer in "Ambi Development"</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p>
+                            From March 2024 to April 2025, I was employed at Ambi Development as a backend and frontend developer, where I worked on the project “ВсеврачиЗдесь.ru.” In this role, I contributed to both the backend architecture and frontend implementation, ensuring the platform’s scalability, usability, and reliable performance. My work was integral to maintaining and enhancing the system’s functionality to meet evolving user and business requirements.
+                            <br/>
+                            (March 2024 – April 2025)
                         </p>
                     </div>
                 </div>
