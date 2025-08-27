@@ -10,7 +10,7 @@
             <br/><br/>
             <div class="row about-inner-section align-items-center">
                 <!-- Left Column: Text -->
-                <div class="col-md-6 col-12 about-inner-column mb-4 mb-md-0">
+                <div class="col-md-12 col-12 about-inner-column mb-4 mb-md-0">
                     <p class="intro">
                         Hi, I’m <strong>Inna Tarasyan</strong> — a passionate
                         <span class="highlight">web developer from Armenia</span>
@@ -60,12 +60,12 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Image -->
-                <div class="col-md-6 col-12 about-right text-center mt-2">
-                    <img class="about-image img-fluid"
-                         src="https://i.ytimg.com/vi/hHHu7wxD8yM/maxresdefault.jpg"
-                         alt="Illustration of a developer workspace with laptop and code on screen">
-                </div>
+                {{--<!-- Right Column: Image -->--}}
+                {{--<div class="col-md-6 col-12 about-right text-center mt-2">--}}
+                    {{--<img class="about-image img-fluid"--}}
+                         {{--src="https://i.ytimg.com/vi/hHHu7wxD8yM/maxresdefault.jpg"--}}
+                         {{--alt="Illustration of a developer workspace with laptop and code on screen">--}}
+                {{--</div>--}}
             </div>
         </div>
     </section>
