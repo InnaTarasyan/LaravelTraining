@@ -162,3 +162,108 @@ body {
     .skill-chip { padding: 8px 14px; font-size: 0.95rem; }
     .skill-chip small { font-size: 0.7rem; }
 }
+
+
+/* About Section Background */
+.about-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4ebf5 100%);
+    padding: 4rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Title & Subtitle */
+.about-section .site-title h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+.about-section .site-title .subtitle {
+    font-size: 1.15rem;
+    color: #555;
+    margin-top: 0.3rem;
+}
+
+/* Intro & Body Text */
+.about-section .intro,
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #2d2d2d;
+    margin-bottom: 1.2rem;
+}
+
+/* Highlight */
+.about-section .highlight {
+    background: linear-gradient(90deg, #1976d2, #42a5f5);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Features Box */
+.features-box {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e0e6ef;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    margin: 2rem 0;
+}
+.features-box h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 1rem;
+}
+.features-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.features-box li {
+    font-size: 1rem;
+    margin: 0.4rem 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+.features-box li::before {
+    content: "✔";
+    color: #1976d2;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Closing Text */
+.about-section .closing {
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+/* Links */
+.about-links {
+    margin-top: 2rem;
+}
+.about-links .link-button {
+    display: inline-block;
+    margin: 0.4rem;
+    padding: 0.65rem 1.3rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+.about-links .primary { background: #1976d2; color: #fff; }
+.about-links .secondary { background: #2e7d32; color: #fff; }
+.about-links .github { background: #24292f; color: #fff; }
+.about-links .linkedin { background: #0a66c2; color: #fff; }
+
+.about-links .link-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
