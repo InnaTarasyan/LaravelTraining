@@ -61,7 +61,7 @@
                 </div>
 
                 <!-- Right Column: Image -->
-                <div class="col-md-6 col-12 about-right text-center">
+                <div class="col-md-6 col-12 about-right text-center mt-2">
                     <img class="about-image img-fluid"
                          src="https://i.ytimg.com/vi/hHHu7wxD8yM/maxresdefault.jpg"
                          alt="Illustration of a developer workspace with laptop and code on screen">

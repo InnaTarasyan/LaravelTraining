@@ -1,0 +1,242 @@
+/* Modern, responsive base overrides for portfolio */
+html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+    color: #1f2937;
+    background-color: #f9fafb;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: #0ea5e9; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Container max widths */
+.container {
+    max-width: 1100px;
+}
+
+/* Section spacing */
+section { padding: 40px 0; }
+@media (max-width: 768px) {
+    section { padding: 28px 0; }
+}
+
+/* Utility spacing */
+.mt-24 { margin-top: 24px; }
+.mb-24 { margin-bottom: 24px; }
+.py-12 { padding-top: 12px; padding-bottom: 12px; }
+
+/* Navbar adjustments for mobile */
+.navbar { border: 0; border-radius: 0; }
+.navbar-default { background-color: #ffffff; border-bottom: 1px solid #e5e7eb; }
+.navbar-brand, .navbar-nav>li>a { padding-top: 18px; padding-bottom: 18px; }
+@media (max-width: 768px) {
+    .navbar-nav { margin: 8px 0; }
+}
+
+/* Cards */
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.card-body { padding: 20px; }
+
+/* Images */
+img { max-width: 100%; height: auto; }
+.myImg { cursor: zoom-in; border-radius: 6px; }
+.app-thumb { max-width: 300px; width: 100%; height: auto; transition: transform .2s ease; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+.app-thumb:hover { transform: scale(1.02); }
+@media (max-width: 576px) {
+    .app-thumb { max-width: 220px; }
+}
+
+/* Buttons */
+.btn-primary { background-color: #0ea5e9; border-color: #0ea5e9; }
+.btn-primary:hover { background-color: #0284c7; border-color: #0284c7; }
+
+/* Tables (DataTables) */
+table.dataTable thead th { border-bottom: 1px solid #e5e7eb; }
+table.dataTable.no-footer { border-bottom: 1px solid #e5e7eb; }
+table.dataTable td, table.dataTable th { word-break: break-word; }
+table.dataTable thead th { white-space: normal; font-size: 14px; padding-top: 10px; padding-bottom: 10px; }
+@media (max-width: 576px) {
+    table.table { font-size: 14px; }
+    table.table th, table.table td { padding: 8px; }
+}
+/* Prevent horizontal scroll by constraining wide content */
+.table-responsive { overflow-x: visible; }
+table.table td:nth-child(3) img { max-width: 160px; height: auto; }
+@media (max-width: 576px) {
+    table.table td:nth-child(3) img { max-width: 120px; }
+}
+
+/* Hide verbose columns on phones; Responsive will show them in child rows */
+@media (max-width: 576px) {
+    td.phone-hide, th.phone-hide { display: none; }
+}
+
+/* Mobile-first DataTables header and toolbar adjustments */
+@media (max-width: 576px) {
+    /* Hide desktop-style table headers; Responsive child rows show labels */
+    table.dataTable thead { display: none; }
+    /* Stack length + search controls */
+    .dataTables_wrapper .row > div[class*="col-sm-6"] { width: 100%; float: none; text-align: left !important; }
+    .dataTables_wrapper .dataTables_filter { margin-top: 8px; }
+    .dataTables_wrapper .dataTables_filter input { width: 100%; box-sizing: border-box; }
+    .dataTables_wrapper .dt-buttons { margin-bottom: 8px; }
+}
+
+/* DataTables UX polish */
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 8px 10px;
+    outline: none;
+}
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+table.dataTable thead th {
+    background: #f3f4f6;
+    color: #111827;
+    font-weight: 600;
+}
+table.dataTable tbody tr:hover {
+    background-color: #f9fafb;
+}
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 8px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border: 1px solid #e5e7eb !important;
+    border-radius: 6px !important;
+    padding: 4px 10px !important;
+    margin: 0 2px !important;
+    color: #374151 !important;
+    background: #ffffff !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: #0ea5e9 !important;
+    color: #ffffff !important;
+    border-color: #0ea5e9 !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #f3f4f6 !important;
+    color: #111827 !important;
+}
+.dataTables_info { color: #6b7280; }
+
+/* Compact density toggle */
+.table-compact.dataTable tbody th, .table-compact.dataTable tbody td { padding: 6px 8px; }
+.table-compact.dataTable thead th, .table-compact.dataTable thead td { padding: 8px; }
+
+/* Responsive details row look */
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+    border-radius: 4px;
+    background-color: #0ea5e9;
+    box-shadow: none;
+}
+table.dataTable tr.child ul.dtr-details {
+    width: 100%;
+}
+table.dataTable tr.child ul.dtr-details > li {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 6px 0;
+}
+table.dataTable tr.child ul.dtr-details .dtr-title {
+    min-width: 120px;
+    color: #6b7280;
+}
+
+/* Make images within tables neat */
+table.dataTable img { border-radius: 6px; }
+
+/* Responsive card for DataTables rows */
+.dt-card-wrapper { padding: 8px 0; }
+.dt-card {
+    display: flex;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 12px;
+    gap: 12px;
+}
+.dt-card__media img { max-width: 140px; height: auto; }
+.dt-card__body { flex: 1; }
+.dt-card__title { font-weight: 600; margin-bottom: 6px; }
+.dt-card__desc { color: #4b5563; margin-bottom: 8px; }
+.dt-card__meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.dt-card__downloads { color: #6b7280; }
+@media (max-width: 480px) {
+    .dt-card__media img { max-width: 100px; }
+}
+
+/* Modal override */
+.modal { display: none; position: fixed; z-index: 1000; padding-top: 60px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7); }
+.modal .modal-content { margin: auto; display: block; max-width: 90%; border-radius: 8px; }
+.modal .close { position: absolute; top: 20px; right: 30px; color: #f3f4f6; font-size: 28px; font-weight: 600; cursor: pointer; }
+
+/* Responsive grid improvements */
+@media (max-width: 992px) {
+    .col-lg-6 { float: none; width: 100%; }
+}
+
+/* Footer spacing */
+footer { margin-top: 24px; }
+
+/* Hero */
+.hero {
+    background: url('../images/inna_profile.jpg') center/cover no-repeat fixed;
+    color: #ffffff;
+    padding: 96px 0;
+}
+.hero:before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+.hero .container { position: relative; }
+.hero__title { font-size: 42px; font-weight: 700; margin-bottom: 12px; text-shadow: 0 1px 2px rgba(0,0,0,0.25); }
+.hero__subtitle { font-size: 18px; opacity: 0.95; margin-bottom: 20px; text-shadow: 0 1px 2px rgba(0,0,0,0.25); }
+.hero__actions .btn { margin-right: 10px; }
+@media (max-width: 768px) {
+    .hero { padding: 64px 0; background-attachment: scroll; }
+    .hero__title { font-size: 32px; }
+}
+
+/* Tabs center on mobile */
+.nav-tabs { border-bottom-color: #e5e7eb; }
+.nav-tabs>li>a { padding: 10px 16px; }
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { border-color: #e5e7eb #e5e7eb transparent; }
+.tab-content { padding-top: 12px; }
+
+/* About section */
+#aboutUs .lead { font-size: 18px; }
+#aboutUs img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 20px; }
+
+/* Skills */
+#skills .label { display: inline-block; margin-right: 8px; margin-bottom: 6px; }
+
+/* Skills chips */
+.skill-item { margin-bottom: 12px; }
+.skill-chip {
+    display: inline-block;
+    background: #eef2ff;
+    color: #1e3a8a;
+    border: 1px solid #c7d2fe;
+    border-radius: 9999px;
+    padding: 6px 12px;
+    font-weight: 600;
+}
+.skill-level { margin-left: 8px; font-size: 13px; }
+@media (max-width: 576px) {
+    .skill-level { display: block; margin-left: 0; margin-top: 4px; }
+}
+
+
