@@ -129,30 +129,31 @@
 
         <div class="container">
             <div class="skills-grid">
-                <span class="skill-chip">PHP <small>Advanced</small></span>
-                <span class="skill-chip">Laravel <small>Advanced</small></span>
-                <span class="skill-chip">JavaScript <small>Intermediate</small></span>
-                <span class="skill-chip">HTML/CSS <small>Advanced</small></span>
-                <span class="skill-chip">SQL <small>Advanced</small></span>
-                <span class="skill-chip">Git <small>Advanced</small></span>
-                <span class="skill-chip">Node.js <small>Intermediate</small></span>
-                <span class="skill-chip">AngularJS <small>Intermediate</small></span>
-                <span class="skill-chip">LESS/Sass <small>Intermediate</small></span>
-                <span class="skill-chip">Design patterns <small>Working</small></span>
-                <span class="skill-chip">Languages: EN/RU/AM <small>Fluent</small></span>
-                <span class="skill-chip">Datatables <small>Proficient</small></span>
-                <span class="skill-chip">TradingView <small>Proficient</small></span>
-                <span class="skill-chip">Metronic (Bootstrap) <small>Experienced</small></span>
-                <span class="skill-chip">Telegram API <small>Experienced</small></span>
-                <span class="skill-chip">select2.js <small>Experienced</small></span>
-                <span class="skill-chip">AJAX <small>Advanced</small></span>
-                <span class="skill-chip">REST APIs <small>Advanced</small></span>
-                <span class="skill-chip">Google Maps API <small>Experienced</small></span>
-                <span class="skill-chip">CryptoCompare API <small>Experienced</small></span>
-                <span class="skill-chip">Docker <small>Working</small></span>
-                <span class="skill-chip">CI/CD <small>Working</small></span>
+                <span class="skill-chip">PHP <small class="level-advanced">Advanced</small></span>
+                <span class="skill-chip">Laravel <small class="level-advanced">Advanced</small></span>
+                <span class="skill-chip">JavaScript <small class="level-intermediate">Intermediate</small></span>
+                <span class="skill-chip">HTML/CSS <small class="level-advanced">Advanced</small></span>
+                <span class="skill-chip">SQL <small class="level-advanced">Advanced</small></span>
+                <span class="skill-chip">Git <small class="level-advanced">Advanced</small></span>
+                <span class="skill-chip">Node.js <small class="level-intermediate">Intermediate</small></span>
+                <span class="skill-chip">AngularJS <small class="level-intermediate">Intermediate</small></span>
+                <span class="skill-chip">LESS/Sass <small class="level-intermediate">Intermediate</small></span>
+                <span class="skill-chip">Design patterns <small class="level-working">Working</small></span>
+                <span class="skill-chip">Languages: EN/RU/AM <small class="level-fluent">Fluent</small></span>
+                <span class="skill-chip">Datatables <small class="level-proficient">Proficient</small></span>
+                <span class="skill-chip">TradingView <small class="level-proficient">Proficient</small></span>
+                <span class="skill-chip">Metronic (Bootstrap) <small class="level-experienced">Experienced</small></span>
+                <span class="skill-chip">Telegram API <small class="level-experienced">Experienced</small></span>
+                <span class="skill-chip">select2.js <small class="level-experienced">Experienced</small></span>
+                <span class="skill-chip">AJAX <small class="level-advanced">Advanced</small></span>
+                <span class="skill-chip">REST APIs <small class="level-advanced">Advanced</small></span>
+                <span class="skill-chip">Google Maps API <small class="level-experienced">Experienced</small></span>
+                <span class="skill-chip">CryptoCompare API <small class="level-experienced">Experienced</small></span>
+                <span class="skill-chip">Docker <small class="level-working">Working</small></span>
+                <span class="skill-chip">CI/CD <small class="level-working">Working</small></span>
             </div>
         </div>
+
     </div>
 
 </div>

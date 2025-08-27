@@ -65,35 +65,35 @@ body {
     margin-bottom: 0.6rem;
 }
 
-/* Skills */
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-.skill-chip {
-    background: #f5f5f5;
-    border-radius: 20px;
-    padding: 8px 14px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #333;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
-.skill-chip small {
-    display: block;
-    font-size: 1.2rem;
-    color: #777;
-}
-.skill-chip:hover {
-    background: #007bff;
-    color: #fff;
-}
-.skill-chip:hover small {
-    color: #eaf1ff;
-}
+/*!* Skills *!*/
+/*.skills-grid {*/
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*gap: 10px;*/
+    /*justify-content: center;*/
+/*}*/
+/*.skill-chip {*/
+    /*background: #f5f5f5;*/
+    /*border-radius: 20px;*/
+    /*padding: 8px 14px;*/
+    /*font-size: 0.9rem;*/
+    /*font-weight: 500;*/
+    /*color: #333;*/
+    /*box-shadow: 0 2px 5px rgba(0,0,0,0.08);*/
+    /*transition: all 0.3s ease;*/
+/*}*/
+/*.skill-chip small {*/
+    /*display: block;*/
+    /*font-size: 1.2rem;*/
+    /*color: #777;*/
+/*}*/
+/*.skill-chip:hover {*/
+    /*background: #007bff;*/
+    /*color: #fff;*/
+/*}*/
+/*.skill-chip:hover small {*/
+    /*color: #eaf1ff;*/
+/*}*/
 
 /* Links (unified buttons) */
 .link-button {
@@ -125,4 +125,153 @@ body {
     .card { padding: 1rem 1.2rem; }
     .skills-grid { gap: 8px; }
     .skill-chip { font-size: 0.85rem; padding: 6px 12px; }
+}
+
+
+/*.skills-grid {*/
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*gap: 14px;*/
+    /*justify-content: center;*/
+/*}*/
+
+/*!* Skill chip base *!*/
+/*.skill-chip {*/
+    /*background: linear-gradient(135deg, #f9f9f9, #f1f1f1);*/
+    /*border-radius: 24px;*/
+    /*padding: 10px 18px;*/
+    /*font-size: 1rem;*/
+    /*font-weight: 600;*/
+    /*color: #333;*/
+    /*box-shadow: 0 4px 8px rgba(0,0,0,0.06);*/
+    /*transition: all 0.3s ease;*/
+    /*display: inline-flex;*/
+    /*align-items: center;*/
+    /*gap: 8px;*/
+    /*cursor: default;*/
+/*}*/
+
+/*!* Skill level badge *!*/
+/*.skill-chip small {*/
+    /*background: #e9ecef;*/
+    /*font-size: 0.75rem;*/
+    /*font-weight: 600;*/
+    /*color: #555;*/
+    /*padding: 3px 8px;*/
+    /*border-radius: 12px;*/
+    /*text-transform: uppercase;*/
+    /*letter-spacing: 0.5px;*/
+/*}*/
+
+/*!* Hover effect *!*/
+/*.skill-chip:hover {*/
+    /*transform: translateY(-3px) scale(1.03);*/
+    /*box-shadow: 0 6px 14px rgba(0,0,0,0.12);*/
+    /*background: linear-gradient(135deg, #ffffff, #f3f9ff);*/
+/*}*/
+/*.skill-chip:hover small {*/
+    /*background: #007bff;*/
+    /*color: #fff;*/
+/*}*/
+
+/*!* Color coding by level *!*/
+/*.skill-chip small:contains("Advanced") {*/
+    /*background: #007bff1a;*/
+    /*color: #007bff;*/
+/*}*/
+/*.skill-chip small:contains("Intermediate") {*/
+    /*background: #ffc1071a;*/
+    /*color: #d39e00;*/
+/*}*/
+/*.skill-chip small:contains("Proficient"),*/
+/*.skill-chip small:contains("Experienced") {*/
+    /*background: #28a7451a;*/
+    /*color: #218838;*/
+/*}*/
+/*.skill-chip small:contains("Working") {*/
+    /*background: #6f42c11a;*/
+    /*color: #6f42c1;*/
+/*}*/
+/*.skill-chip small:contains("Fluent") {*/
+    /*background: #17a2b81a;*/
+    /*color: #117a8b;*/
+/*}*/
+
+
+/* Skills grid */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+
+/* Skill chip */
+.skill-chip {
+    background: linear-gradient(135deg, #f9f9f9, #f1f5ff);
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+/* Hover/active */
+.skill-chip:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+    background: linear-gradient(135deg, #ffffff, #f3f9ff);
+}
+
+/* Optional keyboard focus if you ever make chips focusable */
+.skill-chip:focus-visible {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Level badge (the <small>) */
+.skill-chip small {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/* Color coding by level */
+.level-advanced {
+    background: rgba(0, 123, 255, 0.12);
+    color: #0a58ca;
+}
+.level-intermediate {
+    background: rgba(255, 193, 7, 0.18);
+    color: #b88600;
+}
+.level-proficient,
+.level-experienced {
+    background: rgba(40, 167, 69, 0.14);
+    color: #1f7a34;
+}
+.level-working {
+    background: rgba(111, 66, 193, 0.14);
+    color: #6333c6;
+}
+.level-fluent {
+    background: rgba(23, 162, 184, 0.14);
+    color: #117a8b;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .skills-grid { gap: 10px; }
+    .skill-chip { padding: 8px 14px; font-size: 0.95rem; }
+    .skill-chip small { font-size: 0.7rem; }
 }
