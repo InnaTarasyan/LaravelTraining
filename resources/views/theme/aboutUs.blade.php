@@ -4,6 +4,7 @@
             <!-- Title -->
             <div class="site-title text-center mb-5">
                 <h2 id="about-heading" class="fw-bold">👩‍💻 About Me</h2>
+                <p class="subtitle">Crafting digital experiences that are clean, modern & human-friendly</p>
             </div>
 
             <div class="row about-inner-section align-items-center">
@@ -27,7 +28,7 @@
 
                     <!-- Features -->
                     <div class="features-box">
-                        <h3>📌 Main Features</h3>
+                        <h3>✨ Main Features</h3>
                         <ul>
                             <li>⚡ Real-time crypto tracking</li>
                             <li>📊 Interactive TradingView charts</li>
