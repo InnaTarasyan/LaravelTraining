@@ -4,6 +4,7 @@
             <h2 id="education-heading" class="fw-bold">🎓💼 Education & Experience</h2>
         </div>
 
+        <br/><br/>
         <ul class="timeline">
             <li>
                 <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
@@ -121,8 +122,9 @@
     <!-- Skills Section -->
     <div id="skills" aria-labelledby="skills-heading" class="skills-section py-5">
         <div class="site-title text-center mb-5">
-            <h3 id="skills-heading">⚡ Skills</h3>
+            <h2 id="skills-heading">⚡ Skills</h2>
         </div>
+        <br/><br/>
         <div class="container">
             <div class="skills-grid">
                 <span class="skill-chip">PHP <small>Advanced</small></span>

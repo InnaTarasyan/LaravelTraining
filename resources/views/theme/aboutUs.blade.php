@@ -7,7 +7,7 @@
                 <p class="subtitle">Crafting digital experiences that are clean, modern & human-friendly</p>
             </div>
 
-            <br/>
+            <br/><br/>
             <div class="row about-inner-section align-items-center">
                 <!-- Left Column: Text -->
                 <div class="col-md-6 col-12 about-inner-column mb-4 mb-md-0">

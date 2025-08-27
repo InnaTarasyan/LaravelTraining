@@ -218,7 +218,7 @@ footer { margin-top: 24px; }
 
 /* About section */
 #aboutUs .lead { font-size: 18px; }
-#aboutUs img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 20px; }
+#aboutUs img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 40px; }
 
 /* Skills */
 #skills .label { display: inline-block; margin-right: 8px; margin-bottom: 6px; }
