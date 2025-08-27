@@ -525,7 +525,7 @@ class ApplicationsTableSeeder extends Seeder
                 'name' => 'CryptoTrading',
                 'desc' => 'Coin Trading Project is designed to combine Crypto-currency information from different major sources. It allows online tracking of all changes in key indicators of the Crypto-currency, including the Social Volume Changes in Telegram, Live Coin Watch, CoinGecko, CoinMarketCal, and more.',
                 'img' => 'cryptocurrency-main.jpg',
-                'url' => 'https://cryptoupdates.me',
+                'url' => 'https://cryptotrading.website',
                 'user_id' => 1,
                 'created_at' =>  NULL,
                 'updated_at' => NULL,
