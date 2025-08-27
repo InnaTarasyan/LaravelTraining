@@ -39,13 +39,13 @@ Home.prototype.init = function () {
                 className: 'btn btn-default',
                 text: 'Columns'
             },
-            {
-                text: 'Density',
-                className: 'btn btn-default dt-density',
-                action: function () {
-                    $('#apps').toggleClass('table-compact');
-                }
-            }
+            // {
+            //     text: 'Density',
+            //     className: 'btn btn-default dt-density',
+            //     action: function () {
+            //         $('#apps').toggleClass('table-compact');
+            //     }
+            // }
         ],
         responsive: true,
         autoWidth: false,
@@ -98,7 +98,7 @@ Home.prototype.init = function () {
             {data: 'desc', name: 'desc', "defaultContent" : 'Not Set'},
             {data: 'img', name: 'img', "defaultContent" : 'Not Set'},
             {data: 'url', name: 'url', "defaultContent" : 'Not Set'},
-            {data: 'download_count', name: 'download_count', "defaultContent" : 'Not Set'}
+             {data: 'download_count', name: 'download_count', "defaultContent" : 'Not Set'}
         ],
         "aaSorting": [[ 1, "asc" ]]
     });

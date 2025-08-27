@@ -124,7 +124,9 @@
         <div class="site-title text-center mb-5">
             <h2 id="skills-heading">⚡ Skills</h2>
         </div>
+
         <br/><br/>
+
         <div class="container">
             <div class="skills-grid">
                 <span class="skill-chip">PHP <small>Advanced</small></span>
@@ -152,4 +154,5 @@
             </div>
         </div>
     </div>
+
 </div>
