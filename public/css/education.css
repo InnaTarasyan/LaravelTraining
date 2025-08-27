@@ -1,73 +1,73 @@
-/*!* Timeline *!*/
-/*.timeline {*/
-    /*list-style: none;*/
-    /*padding: 0;*/
-    /*margin: 0;*/
+/*!*!* Timeline *!*!*/
+/*!*.timeline {*!*/
+    /*!*list-style: none;*!*/
+    /*!*padding: 0;*!*/
+    /*!*margin: 0;*!*/
+/*!*}*!*/
+/*!*.timeline li {*!*/
+    /*!*margin-bottom: 20px;*!*/
+    /*!*position: relative;*!*/
+/*!*}*!*/
+/*!*.timeline-panel {*!*/
+    /*!*background: #fff;*!*/
+    /*!*border-radius: 12px;*!*/
+    /*!*padding: 15px 20px;*!*/
+    /*!*box-shadow: 0 3px 8px rgba(0,0,0,0.08);*!*/
+/*!*}*!*/
+/*!*.timeline-title {*!*/
+    /*!*font-size: 1.1rem;*!*/
+    /*!*font-weight: 600;*!*/
+    /*!*color: #2c3e50;*!*/
+    /*!*margin-bottom: 4px;*!*/
+/*!*}*!*/
+/*!*.timeline-subtitle {*!*/
+    /*!*font-size: 0.9rem;*!*/
+    /*!*color: #555;*!*/
+/*!*}*!*/
+
+/*!* Skills *!*/
+/*.skills-grid {*/
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*gap: 10px;*/
+    /*justify-content: center;*/
 /*}*/
-/*.timeline li {*/
-    /*margin-bottom: 20px;*/
-    /*position: relative;*/
-/*}*/
-/*.timeline-panel {*/
-    /*background: #fff;*/
-    /*border-radius: 12px;*/
-    /*padding: 15px 20px;*/
-    /*box-shadow: 0 3px 8px rgba(0,0,0,0.08);*/
-/*}*/
-/*.timeline-title {*/
-    /*font-size: 1.1rem;*/
-    /*font-weight: 600;*/
-    /*color: #2c3e50;*/
-    /*margin-bottom: 4px;*/
-/*}*/
-/*.timeline-subtitle {*/
+/*.skill-chip {*/
+    /*background: #f5f5f5;*/
+    /*border-radius: 20px;*/
+    /*padding: 8px 14px;*/
     /*font-size: 0.9rem;*/
-    /*color: #555;*/
+    /*font-weight: 500;*/
+    /*color: #333;*/
+    /*box-shadow: 0 2px 5px rgba(0,0,0,0.08);*/
+    /*transition: all 0.3s ease;*/
+/*}*/
+/*.skill-chip small {*/
+    /*display: block;*/
+    /*font-size: 1.2rem;*/
+    /*color: #777;*/
+/*}*/
+/*.skill-chip:hover {*/
+    /*background: #007bff;*/
+    /*color: #fff;*/
+/*}*/
+/*.skill-chip:hover small {*/
+    /*color: #eaf1ff;*/
 /*}*/
 
-/* Skills */
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-.skill-chip {
-    background: #f5f5f5;
-    border-radius: 20px;
-    padding: 8px 14px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #333;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
-.skill-chip small {
-    display: block;
-    font-size: 1.2rem;
-    color: #777;
-}
-.skill-chip:hover {
-    background: #007bff;
-    color: #fff;
-}
-.skill-chip:hover small {
-    color: #eaf1ff;
-}
-
-/* Mobile tweaks */
-@media (max-width: 768px) {
-    .timeline-panel {
-        padding: 12px 15px;
-    }
-    .timeline-title {
-        font-size: 1rem;
-    }
-    .skills-grid {
-        gap: 8px;
-    }
-    .skill-chip {
-        font-size: 0.85rem;
-        padding: 6px 12px;
-    }
-}
+/*!* Mobile tweaks *!*/
+/*@media (max-width: 768px) {*/
+    /*.timeline-panel {*/
+        /*padding: 12px 15px;*/
+    /*}*/
+    /*.timeline-title {*/
+        /*font-size: 1rem;*/
+    /*}*/
+    /*.skills-grid {*/
+        /*gap: 8px;*/
+    /*}*/
+    /*.skill-chip {*/
+        /*font-size: 0.85rem;*/
+        /*padding: 6px 12px;*/
+    /*}*/
+/*}*/

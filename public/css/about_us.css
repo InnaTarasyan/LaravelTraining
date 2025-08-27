@@ -4,130 +4,108 @@
 body {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.7;
     color: #222;
-    background: linear-gradient(135deg, #f5f7fa, #eaf6ff);
+    background: #f9fafc;
 }
 
-/* Section */
-.about-section {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 4rem 2rem;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+/* Section Wrapper */
+.section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 3rem 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
 }
-.about-section:hover {
+.section:hover {
     transform: translateY(-3px);
 }
 
-/* Title */
-.site-title h2 {
+/* Titles */
+.section-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-style: italic;
-    color: #0aa1d6;
+    color: #007bff;
     font-weight: 600;
-    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
 }
-.site-title .subtitle {
-    font-size: 1.15rem;
-    font-style: italic;
+.section-subtitle {
+    font-size: 1rem;
     color: #555;
-    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 /* Text */
-.about-inner-column .intro,
-.about-inner-column .closing {
-    font-size: 1.35rem;
-    font-weight: 500;
-    font-style: italic;
-    margin-bottom: 1.4rem;
-    color: #111;
-}
-
-.about-inner-column p {
-    font-size: 1.1rem;
+.section p {
+    font-size: 1.05rem;
     color: #444;
     margin-bottom: 1.2rem;
 }
 
-/* Highlight */
-.highlight {
-    background: linear-gradient(90deg, #d6f0ff, #f1faff);
-    padding: 0.25em 0.5em;
-    border-radius: 8px;
-    font-weight: 600;
-    font-style: italic;
-    color: #0a58ca;
-}
-
-/* Features Box */
-.features-box {
+/* Features / Timeline Panels */
+.card {
     background: #fff;
-    padding: 1.6rem 1.8rem;
-    border-radius: 16px;
-    border-left: 6px solid #0aa1d6;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    margin: 2rem 0;
-    transition: transform 0.3s ease;
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
 }
-.features-box:hover {
-    transform: scale(1.02);
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
-.features-box h3 {
+.card h3 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    color: #0aa1d6;
-    font-weight: 600;
-}
-.features-box ul {
-    list-style: none;
-    padding: 0;
-}
-.features-box ul li {
-    margin-bottom: 0.7rem;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    font-style: italic;
+    font-size: 1.3rem;
+    color: #007bff;
+    margin-bottom: 0.6rem;
 }
 
-/* Image */
-.about-image {
-    border-radius: 20px;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.about-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.15);
-}
-
-/* Links */
-.about-links {
-    margin-top: 2rem;
+/* Skills */
+.skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 10px;
+    justify-content: center;
 }
+.skill-chip {
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+.skill-chip small {
+    display: block;
+    font-size: 1.2rem;
+    color: #777;
+}
+.skill-chip:hover {
+    background: #007bff;
+    color: #fff;
+}
+.skill-chip:hover small {
+    color: #eaf1ff;
+}
+
+/* Links (unified buttons) */
 .link-button {
-    flex: 1 1 auto;
-    min-width: 140px;
-    padding: 14px 22px;
-    text-align: center;
-    border-radius: 12px;
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
     transition: all 0.3s ease;
     color: #fff;
-    font-style: italic;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
 }
 .link-button.primary { background: linear-gradient(135deg, #007bff, #00b4d8); }
 .link-button.secondary { background: linear-gradient(135deg, #6c757d, #495057); }
@@ -135,17 +113,16 @@ body {
 .link-button.linkedin { background: linear-gradient(135deg, #0077b5, #005582); }
 .link-button:hover {
     opacity: 0.95;
-    transform: translateY(-3px) scale(1.03);
+    transform: translateY(-2px);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     body { font-size: 16px; }
-    .site-title h2 { font-size: 2.2rem; }
-    .about-inner-column .intro,
-    .about-inner-column .closing { font-size: 1.15rem; }
-    .about-inner-column p { font-size: 1rem; }
-    .features-box { padding: 1.2rem; }
-    .about-links { flex-direction: column; }
-    .link-button { width: 100%; }
+    .section { padding: 2rem 1.2rem; }
+    .section-title { font-size: 1.8rem; }
+    .section-subtitle { font-size: 0.95rem; }
+    .card { padding: 1rem 1.2rem; }
+    .skills-grid { gap: 8px; }
+    .skill-chip { font-size: 0.85rem; padding: 6px 12px; }
 }
