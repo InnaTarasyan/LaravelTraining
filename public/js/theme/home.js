@@ -136,13 +136,13 @@ Home.prototype.init = function () {
                 className: 'btn btn-default',
                 text: 'Columns'
             },
-            {
-                text: 'Density',
-                className: 'btn btn-default dt-density',
-                action: function () {
-                    $('#web').toggleClass('table-compact');
-                }
-            }
+            // {
+            //     text: 'Density',
+            //     className: 'btn btn-default dt-density',
+            //     action: function () {
+            //         $('#web').toggleClass('table-compact');
+            //     }
+            // }
         ],
         responsive: true,
         autoWidth: false,

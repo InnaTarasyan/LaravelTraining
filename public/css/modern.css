@@ -85,7 +85,7 @@ table.table td:nth-child(3) img { max-width: 160px; height: auto; }
     .dataTables_wrapper .row > div[class*="col-sm-6"] { width: 100%; float: none; text-align: left !important; }
     .dataTables_wrapper .dataTables_filter { margin-top: 8px; }
     .dataTables_wrapper .dataTables_filter input { width: 100%; box-sizing: border-box; }
-    .dataTables_wrapper .dt-buttons { margin-bottom: 8px; }
+    .dataTables_wrapper .dt-buttons { margin-bottom: 8px; padding: 15px}
 }
 
 /* DataTables UX polish */

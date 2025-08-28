@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/about_us.css')}}">
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <link rel="stylesheet" href="{{asset('css/education.css')}}">
+    <link rel="stylesheet" href="{{asset('css/portfolio.css')}}">
 @endsection
 @section('content')
    @include('theme.menu')

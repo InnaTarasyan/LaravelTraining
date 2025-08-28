@@ -1,0 +1,182 @@
+/* --- Tabs centered --- */
+.tabs-wrap {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.tabs-wrap .nav-tabs {
+    white-space: nowrap;
+    border-bottom: 1px solid #eaeaea;
+}
+.tabs-wrap .nav-tabs > li {
+    float: none;
+    display: inline-block;
+}
+.tabs-wrap .nav-tabs > li > a {
+    padding: 10px 16px;
+    font-weight: 500;
+    border-radius: 8px 8px 0 0;
+    transition: background 0.2s;
+}
+.tabs-wrap .nav-tabs > li > a:hover {
+    background: #f8f9fa;
+}
+
+/* --- Mobile tabs as buttons --- */
+@media (max-width: 576px) {
+    .tabs-wrap {
+        justify-content: stretch;
+    }
+    .tabs-wrap .nav-tabs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .tabs-wrap .nav-tabs > li {
+        flex: 1 1 auto;
+        display: block;
+        margin-bottom: 6px;
+    }
+    .tabs-wrap .nav-tabs > li > a {
+        display: block;
+        text-align: center;
+        background: #f1f3f5;
+        border-radius: 8px;
+        padding: 12px;
+    }
+    .tabs-wrap .nav-tabs > li.active > a {
+        background: #007bff;
+        color: #fff;
+    }
+}
+/* --- Mobile table as card layout --- */
+@media (max-width: 768px) {
+    .table-stack thead { display: none; }
+
+    .table-stack, .table-stack tbody, .table-stack tr, .table-stack td {
+        display: block; width: 100%;
+    }
+
+    .table-stack tr {
+        margin: 0 0 20px;
+        padding: 14px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 14px;
+        box-shadow: 0 2px 6px rgba(0,0,0,.06);
+        background: linear-gradient(135deg, #e8f0ff, #fdfbfb);
+    }
+
+    .table-stack td {
+        border: 0;
+        padding: 10px;
+        margin-bottom: 10px;
+        text-align: center;             /* ⬅ Center contents */
+        border-radius: 8px;
+        /* ✨ Light gradient background */
+        /* ✨ Stronger light gradient */
+
+    }
+
+    .table-stack td:last-child {
+        margin-bottom: 0;
+    }
+
+    .table-stack td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #444;
+    }
+
+    .table-stack td img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+/* --- Pagination enhancement --- */
+.dataTables_wrapper .dataTables_paginate {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #f8f9fa;
+    color: #007bff !important;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #007bff;
+    color: #fff !important;
+    border-color: #007bff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #007bff;
+    color: #fff !important;
+    border-color: #007bff;
+    font-weight: 600;
+}
+
+/* --- 📱 Mobile pagination: bigger tap area --- */
+@media (max-width: 768px) {
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        padding: 12px 18px;   /* more padding for thumb-friendly tap */
+        margin: 6px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    .dataTables_length {
+        padding: 15px;
+    }
+
+    #apps_filter {
+        padding: 15px !important;
+        margin-bottom: 20px;
+    }
+
+    #web_filter {
+        padding: 15px !important;
+        margin-bottom: 20px;
+    }
+
+    #apps {
+        padding-top: 25px !important;
+    }
+}
+
+
+.dataTables_length {
+    padding: 15px;
+}
+
+#apps_filter {
+    padding: 15px !important;
+    margin-bottom: 20px;
+}
+
+#web_filter {
+    padding: 15px !important;
+    margin-bottom: 20px;
+}
+
+#apps {
+    padding-top: 25px !important;
+}
+
+/*.dt-buttons {*/
+    /*padding: 20px;*/
+/*}*/
