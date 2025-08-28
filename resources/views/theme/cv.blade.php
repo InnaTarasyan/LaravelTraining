@@ -28,11 +28,14 @@
 
 <div class="section">
     <h2>Experience</h2>
+    <p><b>Ambi Development</b>, Remote Laravel Developer — Worked on the project “Vsevrachizdes.ru” as a backend and frontend developer. Contributed to backend architecture and frontend implementation, ensuring scalability, usability, and reliable performance. Maintained and enhanced system functionality to meet evolving user and business requirements. (Mar 2024 – Apr 2025)</p>
+
+    <p><b>DreamTeam (vsevrachizdes.ru)</b>, Remote Laravel Developer — Maintained performance of existing client websites, developed Laravel web applications, and proposed enhancements to design and functionality. Played a key role in the development of the project “Vsevrachizdes.ru,” ensuring robustness, functionality, and overall success. (Sep 2018 – Mar 2024)</p>
+
     <p><b>Iguan Systems</b>, Web Developer — Laravel development (Dec 2017 – May 2018)</p>
     <p><b>Helix Consulting LLC</b>, Web Developer — Laravel development (Sep 2017 – Dec 2017)</p>
     <p><b>SoftCode LLC</b>, Web Developer — Client websites maintenance & improvements (Jan 2016 – Jul 2017)</p>
     <p><b>Rosgosstrakh Armenia Insurance CJSC</b>, Web Developer — System enhancements & DB management (Jan 2015 – May 2015)</p>
-    <p><b>Remote Laravel Developer</b> — Maintenance, improvements, Laravel sites development</p>
 </div>
 
 <div class="section">
