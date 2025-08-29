@@ -1,107 +1,53 @@
-/* --- Tabs centered --- */
-.tabs-wrap {
-    display: flex;
-    justify-content: center;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+/* --- Base Table --- */
+.table-stack {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
 }
-.tabs-wrap .nav-tabs {
-    white-space: nowrap;
-    border-bottom: 1px solid #eaeaea;
+
+/* Header */
+.table-stack thead th {
+    background: #f5f7fa;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #333;
 }
-.tabs-wrap .nav-tabs > li {
-    float: none;
-    display: inline-block;
+
+/* Cells */
+.table-stack td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
 }
-.tabs-wrap .nav-tabs > li > a {
-    padding: 10px 16px;
+
+/* Row hover */
+.table-stack tbody tr:hover {
+    background: #fafcff;
+}
+
+/* Images */
+.table-stack td img {
+    max-width: 80px;
+    border-radius: 6px;
+}
+
+/* Links */
+.table-stack td a {
+    color: #007bff;
+    text-decoration: none;
     font-weight: 500;
-    border-radius: 8px 8px 0 0;
-    transition: background 0.2s;
 }
-.tabs-wrap .nav-tabs > li > a:hover {
-    background: #f8f9fa;
+.table-stack td a:hover {
+    text-decoration: underline;
 }
 
-/* --- Mobile tabs as buttons --- */
-@media (max-width: 576px) {
-    .tabs-wrap {
-        justify-content: stretch;
-    }
-    .tabs-wrap .nav-tabs {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .tabs-wrap .nav-tabs > li {
-        flex: 1 1 auto;
-        display: block;
-        margin-bottom: 6px;
-    }
-    .tabs-wrap .nav-tabs > li > a {
-        display: block;
-        text-align: center;
-        background: #f1f3f5;
-        border-radius: 8px;
-        padding: 12px;
-    }
-    .tabs-wrap .nav-tabs > li.active > a {
-        background: #007bff;
-        color: #fff;
-    }
-}
-
-/* --- Mobile table as card layout --- */
-@media (max-width: 768px) {
-    .table-responsive {
-        overflow-x: hidden !important;   /* 🚫 Remove horizontal scroll */
-    }
-
-    .table-stack thead { display: none; }
-
-    .table-stack, .table-stack tbody, .table-stack tr, .table-stack td {
-        display: block;
-        width: 100%;
-    }
-
-    .table-stack tr {
-        margin: 0 0 20px;
-        padding: 16px;
-        background: linear-gradient(135deg, #e8f0ff, #fdfbfb);
-        border: 1px solid #e0e0e0;
-        border-radius: 14px;
-        box-shadow: 0 2px 6px rgba(0,0,0,.06);
-    }
-
-    .table-stack td {
-        border: none;
-        padding: 12px;
-        margin-bottom: 12px;
-        text-align: center;
-        border-radius: 10px;
-        background: linear-gradient(135deg, #f9fafb, #eef1f6);
-    }
-
-    .table-stack td:last-child {
-        margin-bottom: 0;
-    }
-
-    .table-stack td::before {
-        content: attr(data-label);
-        display: block;
-        font-weight: 600;
-        margin-bottom: 6px;
-        color: #333;
-    }
-
-    .table-stack td img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-}
-
-/* --- Pagination enhancement --- */
+/* --- Pagination --- */
 .dataTables_wrapper .dataTables_paginate {
     text-align: center;
     margin: 20px 0;
@@ -113,7 +59,7 @@
     margin: 0 4px;
     border: 1px solid #ddd;
     border-radius: 6px;
-    background: #f8f9fa;
+    background: #fff;
     color: #007bff !important;
     font-size: 14px;
     transition: all 0.2s;
@@ -121,29 +67,102 @@
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
     background: #007bff;
     color: #fff !important;
-    border-color: #007bff;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
     background: #007bff;
     color: #fff !important;
     border-color: #007bff;
-    font-weight: 600;
 }
 
-/* --- 📱 Mobile pagination: bigger tap area --- */
+/* --- Search & Length Controls --- */
+.dataTables_length,
+.dataTables_filter {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #444;
+}
+.dataTables_filter input,
+.dataTables_length select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-left: 6px;
+}
+
+/* --- 📱 Mobile View: Card Layout --- */
 @media (max-width: 768px) {
-    .dataTables_wrapper .dataTables_paginate .paginate_button {
-        padding: 12px 18px;
-        margin: 6px;
-        font-size: 16px;
-        border-radius: 10px;
+    .table-responsive {
+        overflow-x: hidden !important;
     }
 
-    .dataTables_length,
-    #apps_filter,
-    #web_filter {
-        padding: 15px;
-        margin-bottom: 20px;
-        text-align: center;
+    .table-stack thead { display: none; }
+
+    .table-stack, .table-stack tbody, .table-stack tr, .table-stack td {
+        display: block;
+        width: 100%;
     }
+
+    .table-stack tr {
+        margin: 0 0 16px;
+        padding: 14px;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,.05);
+    }
+
+    .table-stack td {
+        border: none;
+        padding: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        background: #f9fafb;
+        border-radius: 6px;
+    }
+
+    .table-stack td:last-child {
+        margin-bottom: 0;
+    }
+
+    .table-stack td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: #555;
+    }
+
+    .table-stack td img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    /* Pagination larger on mobile */
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        padding: 12px 18px;
+        font-size: 15px;
+        margin: 6px;
+    }
+}
+
+/* --- Tabs centered (desktop) --- */
+.tabs-wrap {
+    display: flex;
+    justify-content: center;   /* center wrapper */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabs-wrap .nav-tabs {
+    display: flex;
+    justify-content: center;   /* center UL inside */
+    border-bottom: 1px solid #eaeaea;
+    padding-left: 0;
+    margin: 0 auto;           /* keep aligned */
+}
+
+.tabs-wrap .nav-tabs > li {
+    display: inline-block;
+    float: none;
+    margin: 0 6px;
 }
