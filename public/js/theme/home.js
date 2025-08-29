@@ -66,7 +66,7 @@ Home.prototype.init = function () {
                 // Capitalize first letter
                 text = text.charAt(0).toUpperCase() + text.slice(1);
                 var isPhone = window.matchMedia && window.matchMedia('(max-width: 576px)').matches;
-                var limit = isPhone ? 48 : 90;
+                var limit = isPhone ? 58 : 100;
                 var short = text.length > limit ? (text.substr(0, limit).replace(/[,;:\s]+\S*$/, '') + '…') : text;
                 return '<span title="'+ text +'">' + short + '</span>';
             }},
@@ -79,7 +79,7 @@ Home.prototype.init = function () {
                     if (html.indexOf('target=') === -1) {
                         html = html.replace('<a ', '<a target="_blank" rel="noopener noreferrer" ');
                     }
-                    return html.replace(/>(.*?)<\/a>/, '>Open<\/a>');
+                    return html.replace(/>(.*?)<\/a>/, '>Go<\/a>');
                 }
                 var url = $('<div>').text(html).text();
                 return '<a href="'+ url +'" target="_blank" rel="noopener noreferrer">Open</a>';
@@ -159,7 +159,7 @@ Home.prototype.init = function () {
                 if (!text) return '';
                 text = text.charAt(0).toUpperCase() + text.slice(1);
                 var isPhone = window.matchMedia && window.matchMedia('(max-width: 576px)').matches;
-                var limit = isPhone ? 48 : 90;
+                var limit = isPhone ? 58 : 100;
                 var short = text.length > limit ? (text.substr(0, limit).replace(/[,;:\s]+\S*$/, '') + '…') : text;
                 return '<span title="'+ text +'">' + short + '</span>';
             }},
@@ -170,7 +170,7 @@ Home.prototype.init = function () {
                     if (html.indexOf('target=') === -1) {
                         html = html.replace('<a ', '<a target="_blank" rel="noopener noreferrer" ');
                     }
-                    return html.replace(/>(.*?)<\/a>/, '>Open<\/a>');
+                    return html.replace(/>(.*?)<\/a>/, '>Go<\/a>');
                 }
                 var url = $('<div>').text(html).text();
                 return '<a href="'+ url +'" target="_blank" rel="noopener noreferrer">Open</a>';
