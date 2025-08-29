@@ -84,9 +84,9 @@ class HomeController extends Controller
             ->editColumn('img', function ($item){
                 return '<img class="myImg app-thumb" src="images/apps/'.$item->img.'" alt="'.e($item->name).'" title="'.e($item->name).'" loading="lazy" decoding="async" width="200" height="100">';
             })
-            ->editColumn('desc', function ($item){
-                return substr($item->desc, 0, 60)."..";
-            })
+//            ->editColumn('desc', function ($item){
+//                return substr($item->desc, 0, 250)."..";
+//            })
             ->editColumn('url', function ($item){
                 return '<a href="'.$item->url.'">'. $item->url .'</a>';
             })
