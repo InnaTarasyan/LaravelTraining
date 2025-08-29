@@ -50,33 +50,36 @@
         color: #fff;
     }
 }
+
 /* --- Mobile table as card layout --- */
 @media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: hidden !important;   /* 🚫 Remove horizontal scroll */
+    }
+
     .table-stack thead { display: none; }
 
     .table-stack, .table-stack tbody, .table-stack tr, .table-stack td {
-        display: block; width: 100%;
+        display: block;
+        width: 100%;
     }
 
     .table-stack tr {
         margin: 0 0 20px;
-        padding: 14px;
-        background: #fff;
+        padding: 16px;
+        background: linear-gradient(135deg, #e8f0ff, #fdfbfb);
         border: 1px solid #e0e0e0;
         border-radius: 14px;
         box-shadow: 0 2px 6px rgba(0,0,0,.06);
-        background: linear-gradient(135deg, #e8f0ff, #fdfbfb);
     }
 
     .table-stack td {
-        border: 0;
-        padding: 10px;
-        margin-bottom: 10px;
-        text-align: center;             /* ⬅ Center contents */
-        border-radius: 8px;
-        /* ✨ Light gradient background */
-        /* ✨ Stronger light gradient */
-
+        border: none;
+        padding: 12px;
+        margin-bottom: 12px;
+        text-align: center;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #f9fafb, #eef1f6);
     }
 
     .table-stack td:last-child {
@@ -88,7 +91,7 @@
         display: block;
         font-weight: 600;
         margin-bottom: 6px;
-        color: #444;
+        color: #333;
     }
 
     .table-stack td img {
@@ -101,8 +104,7 @@
 /* --- Pagination enhancement --- */
 .dataTables_wrapper .dataTables_paginate {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
@@ -116,13 +118,11 @@
     font-size: 14px;
     transition: all 0.2s;
 }
-
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
     background: #007bff;
     color: #fff !important;
     border-color: #007bff;
 }
-
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
     background: #007bff;
     color: #fff !important;
@@ -133,50 +133,17 @@
 /* --- 📱 Mobile pagination: bigger tap area --- */
 @media (max-width: 768px) {
     .dataTables_wrapper .dataTables_paginate .paginate_button {
-        padding: 12px 18px;   /* more padding for thumb-friendly tap */
+        padding: 12px 18px;
         margin: 6px;
         font-size: 16px;
         border-radius: 10px;
     }
 
-    .dataTables_length {
-        padding: 15px;
-    }
-
-    #apps_filter {
-        padding: 15px !important;
-        margin-bottom: 20px;
-    }
-
+    .dataTables_length,
+    #apps_filter,
     #web_filter {
-        padding: 15px !important;
+        padding: 15px;
         margin-bottom: 20px;
-    }
-
-    #apps {
-        padding-top: 25px !important;
+        text-align: center;
     }
 }
-
-
-.dataTables_length {
-    padding: 15px;
-}
-
-#apps_filter {
-    padding: 15px !important;
-    margin-bottom: 20px;
-}
-
-#web_filter {
-    padding: 15px !important;
-    margin-bottom: 20px;
-}
-
-#apps {
-    padding-top: 25px !important;
-}
-
-/*.dt-buttons {*/
-    /*padding: 20px;*/
-/*}*/
